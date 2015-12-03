@@ -35,6 +35,9 @@ gem 'devise', '~> 3.5', '>= 3.5.2'
 # View helper for gravatar import
 gem 'gravatar_image_tag', '~> 1.2'
 
+# Provides bootstrap 3 with SASS for Rails
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
