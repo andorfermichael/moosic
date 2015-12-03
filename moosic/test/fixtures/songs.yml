@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titel: MyString
+  source: MyString
+  thumbnail_url: MyString
+  song_url: MyString
+  host: MyString
+  year: 2015-12-03
+
+two:
+  titel: MyString
+  source: MyString
+  thumbnail_url: MyString
+  song_url: MyString
+  host: MyString
+  year: 2015-12-03
