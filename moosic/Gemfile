@@ -26,6 +26,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Authentificate with different providers like Facebook, Twitter...
+gem 'omniauth', '~> 1.2', '>= 1.2.2'
+
+# Extend the functionality of omniauth
+gem 'devise', '~> 3.5', '>= 3.5.2'
+
+# View helper for gravatar import
+gem 'gravatar_image_tag', '~> 1.2'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
