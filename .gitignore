@@ -15,3 +15,6 @@
 log/*
 !/log/.keep
 tmp/
+
+# Ignore files which contain secret tokens
+omniauth.rb
