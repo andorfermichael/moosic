@@ -27,12 +27,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 # Authentificate with different providers like Facebook, Twitter...
-gem 'omniauth', '~> 1.2', '>= 1.2.2'
+gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 gem 'omniauth-facebook', '~> 3.0'
-gem 'omniauth-gplus', '~> 2.0', '>= 2.0.1'
+gem 'omniauth-google-oauth2', '~> 0.2.9'
 
-# Extend the functionality of omniauth
-gem 'devise', '~> 3.5', '>= 3.5.2'
+# Ensure net/https uses OpenSSL::SSL::VERIFY_PEER to verify SSL certificates
+# and provides certificate bundle in case OpenSSL cannot find one
+gem 'certified', '~> 1.0'
 
 # View helper for gravatar import
 gem 'gravatar_image_tag', '~> 1.2'
