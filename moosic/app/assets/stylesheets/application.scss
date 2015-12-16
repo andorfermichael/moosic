@@ -1,9 +1,11 @@
+// third party
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-social";
 @import "font-awesome";
 
+// globals
 @import "variables";
 
-
+// specific styles
 @import "login";
