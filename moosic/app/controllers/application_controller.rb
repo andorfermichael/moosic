@@ -6,7 +6,10 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    @current_user ||= User.find_by(id: session[:user_id])
+    @current_user = nil
+    if session[:user_id]
+      @current_user ||= User.where(id: session[:user_id]).first
+    end
   end
 
   helper_method :current_user

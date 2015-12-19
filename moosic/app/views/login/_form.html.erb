@@ -1,16 +1,13 @@
 <%= form_for(:session, url: login_path) do |f| %>
   <div class="input-container">
     <div class="field">
-      <%= f.text_field :name %>
+      <%= f.email_field :email, :placeholder => 'email' %>
     </div>
     <div class="field">
-      <%= f.email_field :email %>
-    </div>
-    <div class="field">
-      <%= f.password_field :password_digest %>
+      <%= f.password_field :password, :placeholder => 'password' %>
     </div>
     <div class="actions">
-      <%= f.submit "Log in" %>
+      <%= f.submit 'Log in' %>
     </div>
   </div>
 <% end %>

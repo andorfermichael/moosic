@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   root to: 'login#index'
 
-  resources :users
-
-  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/signup', to: 'users#new'
+  get '/auth/:provider/callback', to: 'sessions#create_social'
+  post '/login', to: 'sessions#create_conventional'
   delete '/logout', to: 'sessions#destroy'
+
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
