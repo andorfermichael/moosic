@@ -27,9 +27,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 # Authentificate with different providers like Facebook, Twitter...
+gem 'omniauth-oauth2', '~> 1.1.2'
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
-gem 'omniauth-facebook', '~> 3.0'
-gem 'omniauth-google-oauth2', '~> 0.2.9'
+gem 'omniauth-facebook', '~> 1.6'
+gem 'omniauth-google-oauth2', '~> 0.2.8'
+gem 'omniauth-soundcloud', '~> 1.0', '>= 1.0.1'
 
 # Ensure net/https uses OpenSSL::SSL::VERIFY_PEER to verify SSL certificates
 # and provides certificate bundle in case OpenSSL cannot find one

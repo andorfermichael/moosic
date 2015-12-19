@@ -4,14 +4,17 @@
       <h1>Login</h1>
       <%= render 'form' %>
       <div class="social-container">
-        <%= link_to 'Twitter', :href => '/auth/twitter', :class => 'actions btn btn-block btn-lg btn-social btn-twitter' do %>
-            <i class="fa fa-twitter"></i> Sign in with Twitter
-        <% end %>
         <%= link_to 'Facebook', :href => '/auth/facebook', :class => 'actions btn btn-block btn-lg btn-social btn-facebook' do %>
             <span class="fa fa-facebook"></span> Sign in with Facebook
         <% end %>
+        <%= link_to 'Twitter', :href => '/auth/twitter', :class => 'actions btn btn-block btn-lg btn-social btn-twitter' do %>
+            <i class="fa fa-twitter"></i> Sign in with Twitter
+        <% end %>
         <%= link_to 'Google+', :href => '/auth/google', :class => 'actions btn btn-block btn-lg btn-social btn-google-plus' do %>
-            <span class="fa fa-google-plus"></span> Sign in with Google+
+            <span class="fa fa-google-plus"></span> Sign in with Google
+        <% end %>
+        <%= link_to 'SoundCloud', :href => '/auth/soundcloud', :class => 'actions btn btn-block btn-lg btn-social btn-soundcloud' do %>
+            <span class="fa fa-soundcloud"></span> Sign in with SoundCloud
         <% end %>
       </div>
       <div class="options-container">
