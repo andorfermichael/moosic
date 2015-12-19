@@ -26,7 +26,8 @@ class User < ActiveRecord::Base
         user.email = auth['info']['email']
         user.location = auth['info']['location']
         user.image_url = auth['info']['image']
-        user.password = auth['credentials']['secret']
+        password = auth['credentials']['token']
+        user.password = password[0..10]
         #user.url = auth['info']['urls'][user.provider.capitalize]
       end
 
