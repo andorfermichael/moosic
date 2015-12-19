@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'login#index'
+  root to: 'authentication#index'
 
   get '/signup', to: 'users#new'
   get '/auth/:provider/callback', to: 'sessions#create_social'
-  post '/login', to: 'sessions#create_conventional'
+  post '/authentication', to: 'sessions#create_conventional'
   delete '/logout', to: 'sessions#destroy'
 
   resources :users

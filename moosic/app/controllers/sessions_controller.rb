@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      redirect_to users_path, alert: 'Logged in!'
+      redirect_to users_path, notice: 'Logged in!'
     else
       redirect_to root_path, alert: 'Log in failed!'
     end
@@ -30,8 +30,7 @@ class SessionsController < ApplicationController
   def destroy
     if current_user
       session[:user_id] = nil
-      flash[:success] = 'Logged out'
     end
-    redirect_to root_path
+    redirect_to root_path, notice: 'Logged out!'
   end
 end
