@@ -1,12 +1,15 @@
-// third party
+// Place all the import statements here.
+
+// Third Party
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-social";
 @import "font-awesome";
 
-// globals
+// Globals
 @import "variables";
 
-// specific styles
+// Specific Styles
+@import "main";
 @import "authentication";
 @import "users";
