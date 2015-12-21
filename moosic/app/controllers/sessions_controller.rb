@@ -11,9 +11,9 @@ class SessionsController < ApplicationController
       # This is how we keep the user # logged in
       # when they navigate around our website.
       session[:user_id] = user.id
-      redirect_to users_path, notice: 'Logged in!'
+      redirect_to users_path, notice: 'Login successfully!'
     else
-      redirect_to root_path, alert: 'Log in failed!'
+      redirect_to root_path, alert: 'Email and Password invalid!'
     end
   end
 
@@ -25,9 +25,9 @@ class SessionsController < ApplicationController
     # Authentication successfull
     if user
       session[:user_id] = user.id
-      redirect_to users_path, notice: 'Logged in!'
+      redirect_to users_path, notice: 'Authentication successfully!'
     else
-      redirect_to root_path, alert: 'Log in failed!'
+      redirect_to root_path, alert: 'Authentication failed!'
     end
   end
 
@@ -36,6 +36,6 @@ class SessionsController < ApplicationController
     if current_user
       session[:user_id] = nil
     end
-    redirect_to root_path, notice: 'Logged out!'
+    redirect_to root_path, notice: 'Logout successfully!'
   end
 end
