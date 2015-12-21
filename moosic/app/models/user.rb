@@ -4,6 +4,11 @@ class User < ActiveRecord::Base
   has_many :authentications
 
   validates_confirmation_of :password
+  validates :email, uniqueness: true
+  validates :email, :email_format => { :message => 'Email-Address has no valid format' }
+  validates :name, :email, :password, :password_confirmation, presence: true
+  validates :name, length: { in: 4..30 }
+  validates :password, length: { in: 9..20 }
 
   # Find and returns existing user
   # or creates and returns a new user
