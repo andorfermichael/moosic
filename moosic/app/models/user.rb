@@ -3,12 +3,12 @@ class User < ActiveRecord::Base
   has_many :playlists
   has_many :authentications
 
-  validates_confirmation_of :password
-  validates :email, uniqueness: true
-  validates :email, :email_format => { :message => 'Email-Address has no valid format' }
-  validates :name, :email, :password, :password_confirmation, presence: true
-  validates :name, length: { in: 4..30 }
-  validates :password, length: { in: 9..20 }
+  validates_confirmation_of :password, :on => :save
+  validates :email, uniqueness: true, :on => :update
+  validates :email, :email_format => { :message => 'Email-Address has no valid format' }, :on => :save
+  validates :name, :email, :password, :password_confirmation, presence: true, :on => :save
+  validates :name, length: { in: 4..30 }, :on => :save
+  validates :password, length: { in: 9..20 }, :on => :save
 
   # Find and returns existing user
   # or creates and returns a new user
@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 
       # Store user
       a.user = u
-      a.save!
+      a.save!(:validate => false) # No validations for social login
     end
     return a.user
   end # def self.find_or_create_with_omniauth(auth)
