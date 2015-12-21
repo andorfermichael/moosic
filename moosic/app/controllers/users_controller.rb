@@ -5,6 +5,11 @@ class UsersController < ApplicationController
   def index
   end
 
+  # Create new user object when rendering new user view
+  def new
+    @user = User.new
+  end
+
   # POST /users
   # POST /users.json
   # Stores user in database
