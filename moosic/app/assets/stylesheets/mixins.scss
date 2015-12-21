@@ -1,0 +1,10 @@
+// Font Size Calculator
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size !important;
+  font-size: calculateRem($size) !important;
+}
