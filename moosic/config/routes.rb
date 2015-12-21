@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'authentication#index'
 
+  # Login and Sign-up routes
   get '/signup', to: 'users#new'
   get '/auth/:provider/callback', to: 'sessions#create_social'
   post '/authentication', to: 'sessions#create_conventional'

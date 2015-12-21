@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # Indicates whether a user is logged in or not
   def current_user
     @current_user = nil
     if session[:user_id]
