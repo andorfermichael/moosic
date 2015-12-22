@@ -5,17 +5,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container-fluid.new{
-  width: 100%;
+.container-fluid.new {
   height: 100%;
+  width: 100%;
   background: url(background-blurred.jpg) no-repeat center center fixed;
   background-size: cover;
   display: table;
-}
 
-.row {
-  display: table-cell;
-  vertical-align: middle;
+  .row {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 .center-block {
@@ -69,3 +69,105 @@
     }
   }
 }
+
+.container-fluid.show {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: $base-gray;
+
+  .row {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.30);
+  }
+}
+
+.search-container {
+  height: 100%;
+  width: 100%;
+  padding: 7px 15px;
+  background-color: $base-white;
+  display: table-cell;
+  vertical-align: middle;
+
+  h1 {
+    margin: 0;
+    font-weight: normal;
+    line-height: 48px;
+    @include font-size(50px);
+  }
+
+  .img-circle-small {
+    border-radius: 50%;
+    border: 2px solid $base-cyan;
+  }
+
+  .field {
+    box-sizing: border-box;
+    padding-top: 5px;
+    height: 48px;
+
+    .inner {
+      position: relative;
+      width: 80%;
+      margin: auto;
+    }
+
+    .inner .glyphicon {
+      position: absolute;
+      padding: 10px;
+      pointer-events: none;
+    }
+
+    .left .glyphicon  {
+      left:  0px;
+    }
+
+    .right .glyphicon {
+      right: 0px;
+    }
+
+    .left input  {
+      padding-left:  30px;
+    }
+
+    .right input {
+      padding-right: 30px;
+    }
+
+    .glyphicon {
+      margin-right: 5px;
+      margin-top: 0px;
+      @include font-size(30px);
+      font-weight: lighter;
+    }
+
+    .search-field {
+      height: 40px;
+      width: 100%;
+      padding: 5px 15px;
+      background-color: $base-gray;
+      border-radius: 20px;
+      border-color: transparent;
+      box-shadow: inset 1px 1px 0px 1px rgba($base-black, 0.6);
+      font-weight: lighter;
+      @include font-size(30px);
+    }
+  }
+
+  .user-info-top {
+    p {
+      display: inline-block;
+      margin-right: 10px;
+      @include font-size(28px);
+    }
+
+    .float-right {
+      float: right;
+    }
+  }
+}
+
+
+

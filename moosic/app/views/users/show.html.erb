@@ -1,24 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid show">
+  <div class="row col-lg-12">
+    <div class="search-container col-lg-12">
+      <div class="col-lg-4">
+        <h1>moosic</h1>
+      </div>
+      <div class="col-lg-4">
+        <%= render 'searchform' %>
+      </div>
+      <div class="user-info-top col-lg-4">
+        <div class="float-right">
+          <p><%= current_user.name.downcase %></p>
+          <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-small' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
 
-<p>
-  <strong>Picture url:</strong>
-  <%= @user.picture_url %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

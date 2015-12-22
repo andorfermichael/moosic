@@ -5,6 +5,10 @@ class UsersController < ApplicationController
   def index
   end
 
+  def show
+
+  end
+
   # Create new user object when rendering new user view
   def new
     @user = User.new
