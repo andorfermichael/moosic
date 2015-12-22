@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  resources :songs
-  resources :playlists
+  root to: 'authentication#index'
+
+  # Login and Sign-up routes
+  get '/signup', to: 'users#new'
+  get '/auth/:provider/callback', to: 'sessions#create_social'
+  post '/authentication', to: 'sessions#create_conventional'
+  delete '/logout', to: 'sessions#destroy'
+
   resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

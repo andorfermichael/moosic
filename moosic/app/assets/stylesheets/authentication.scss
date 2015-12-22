@@ -1,11 +1,8 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the Login controller here.
+// Place all the styles related to the authentication controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container-fluid.new{
+.container-fluid.authentication {
   width: 100%;
   height: 100%;
   background: url(background-blurred.jpg) no-repeat center center fixed;
@@ -22,10 +19,10 @@
   float: none;
 }
 
-.registration-container {
+.login-container {
   box-sizing: border-box;
-  margin: 0 auto;
-  padding: 10px 35px 35px 35px;
+  margin: auto;
+  padding: 10px 35px 20px 35px;
   background-color: rgba($base-white, 0.65);
 
   h1 {
@@ -48,7 +45,6 @@
     input:not([type=button]):not([type=reset]):not([type=submit]) {
       background-color: transparent;
       border: 2px solid rgba($base-white, 0.65);
-      border-radius: 0;
       color: $base-white;
     }
 
@@ -66,6 +62,41 @@
 
     :-ms-input-placeholder {
       color: rgba($base-white, 0.65);
+    }
+  }
+
+  .social-container {
+    height: auto;
+    margin-top: 40px;
+
+    .btn-md {
+      border-radius: 3px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .fa {
+      @include font-size(32px);
+    }
+  }
+
+  .options-container {
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+
+    p {
+      display: inline-block;
+    }
+
+    a:link {
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    a:hover {
+      text-decoration: none;
     }
   }
 }

@@ -1,0 +1,11 @@
+en:
+  flash_messages:
+    sessions:
+      create_conventional:
+        success: "Login successfully!"
+        error: "Email and Password invalid! Try again!"
+      create_social:
+        success: "Authentication successfully"
+        error: "Authentication failed!"
+      destroy:
+        info: "You have been logged out!"

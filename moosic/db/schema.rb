@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203093925) do
+ActiveRecord::Schema.define(version: 20151218175139) do
+
+  create_table "authentications", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.integer  "user_id"
+    t.string   "token"
+    t.string   "secret"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "authentications", ["user_id"], name: "index_authentications_on_user_id"
 
   create_table "playlists", force: :cascade do |t|
     t.string   "name"
@@ -45,12 +57,17 @@ ActiveRecord::Schema.define(version: 20151203093925) do
   add_index "tracks", ["song_id"], name: "index_tracks_on_song_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
+    t.string   "uid"
+    t.string   "name"
     t.string   "email"
-    t.string   "picture_url"
+    t.string   "location"
+    t.string   "image_url"
+    t.string   "url"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  add_index "users", ["uid"], name: "index_users_on_uid"
 
 end
