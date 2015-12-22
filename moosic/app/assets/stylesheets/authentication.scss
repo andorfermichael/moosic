@@ -15,9 +15,12 @@
   vertical-align: middle;
 }
 
+.center-block {
+  float: none;
+}
+
 .login-container {
   box-sizing: border-box;
-  width: 350px;
   margin: auto;
   padding: 10px 35px 20px 35px;
   background-color: rgba($base-white, 0.65);
@@ -30,11 +33,10 @@
 
   .input-container {
     height: auto;
-    width: 280px;
 
     input {
       height: 45px;
-      width: 275px;
+      width: 100%;
       margin-bottom: 10px;
       padding-left: 10px;
       padding-right: 10px;
@@ -65,22 +67,22 @@
 
   .social-container {
     height: auto;
-    width: 280px;
     margin-top: 40px;
 
-    .btn-lg {
+    .btn-md {
       border-radius: 3px;
       margin-bottom: 10px;
+      width: 100%;
     }
 
     .fa {
-      @include font-size(40px);
+      @include font-size(32px);
     }
   }
 
   .options-container {
     height: auto;
-    width: 280px;
+    width: 100%;
     margin-top: 20px;
     text-align: center;
 

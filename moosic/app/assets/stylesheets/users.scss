@@ -18,9 +18,12 @@
   vertical-align: middle;
 }
 
+.center-block {
+  float: none;
+}
+
 .registration-container {
   box-sizing: border-box;
-  width: 350px;
   margin: 0 auto;
   padding: 10px 35px 35px 35px;
   background-color: rgba($base-white, 0.65);
@@ -33,11 +36,10 @@
 
   .input-container {
     height: auto;
-    width: 280px;
 
     input {
       height: 45px;
-      width: 275px;
+      width: 100%;
       margin-bottom: 10px;
       padding-left: 10px;
       padding-right: 10px;
@@ -46,6 +48,7 @@
     input:not([type=button]):not([type=reset]):not([type=submit]) {
       background-color: transparent;
       border: 2px solid rgba($base-white, 0.65);
+      border-radius: 0;
       color: $base-white;
     }
 
