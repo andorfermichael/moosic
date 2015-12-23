@@ -4,11 +4,13 @@ class User < ActiveRecord::Base
   has_many :authentications
 
   validates_confirmation_of :password, :on => :save
-  validates :email, uniqueness: true, :on => :update
+  validates :email, uniqueness: true, :on => :save
   validates :email, :email_format => { :message => 'Email-Address has no valid format' }, :on => :save
   validates :name, :email, :password, :password_confirmation, presence: true, :on => :save
   validates :name, length: { in: 4..30 }, :on => :save
   validates :password, length: { in: 9..20 }, :on => :save
+
+  attr_accessor :count_playlists
 
   # Find and returns existing user
   # or creates and returns a new user

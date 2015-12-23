@@ -150,7 +150,7 @@
       background-color: $base-gray;
       border-radius: 20px;
       border-color: transparent;
-      box-shadow: inset 1px 1px 0px 1px rgba($base-black, 0.6);
+      box-shadow: inset 1px 1px 0 1px rgba($base-black, 0.6);
       font-weight: lighter;
       @include font-size(30px);
     }
@@ -166,6 +166,45 @@
     .float-right {
       float: right;
     }
+  }
+}
+
+.user-profile-container {
+  padding-top: 70px;
+  height: 100vh;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  text-align: center;
+
+  .user-info-left {
+    height: 100%;
+
+    .img-circle-big {
+      border-radius: 50%;
+      border: 4px solid $base-cyan;
+      box-shadow: 4px 4px 5px 0 rgba(50, 50, 50, 0.75);
+    }
+
+    .separation-line {
+      height: 5px;
+      margin-top: 15px;
+      display: inline-block;
+      width: 250px;
+      border-top: 2px solid $base-black;
+    }
+
+    p {
+      margin-top: -10px;
+      @include font-size(32px);
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .playlists-list {
+    height: 100%;
   }
 }
 
