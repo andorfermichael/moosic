@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create([
-  {username: "MusterMax", email: "muster.max@muster.com", password: "secret", picture_url: "profile.com"},
-  {username: "ProfiPeter", email: "profi.peter@profi.com", password: "anonymous", picture_url: "profile.com"},
-  {username: "NilpferdNils", email: "nilpferd.nils@nilpferd.com", password: "amazonas"}
+  {name: "MichaelMustermann", email: "michael.diesunddas@yahoo.de", location: "Salzburg", image_url: "https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png", password: "secret", },
+  {name: "ProfiPeter", email: "profi.peter@profi.com", location: "Wien", image_url: "https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png", password: "anonymous",},
+  {name: "NilpferdNils", email: "nilpferd.nils@nilpferd.com", location: "München", image_url: "https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png", password: "amazonas"}
 ])
 
 
