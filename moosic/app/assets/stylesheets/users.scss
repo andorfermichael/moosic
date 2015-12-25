@@ -193,18 +193,18 @@ html, body {
     }
 
     .separation-line {
-      height: 5px;
+      height: 25px;
       margin-top: 15px;
       display: inline-block;
-      width: 250px;
+      width: 220px;
       border-top: 2px solid $base-black;
     }
 
     p {
-      margin-top: -10px;
       @include font-size(32px);
-      &:first-child {
-        margin-top: 20px;
+
+      &:not(:first-child) {
+        margin-top: -10px;
       }
     }
   }

@@ -5,7 +5,7 @@
       <div class="user-info-left col-lg-3">
         <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-big center-block', width: 250, height: 250 %>
         <h3><%= current_user.name.downcase %></h3>
-        <span class="separation-line"</div>
+        <div class="separation-line"></div>
         <p>member since: <%= current_user.created_at.year %></p>
         <p>playlists: <%= current_user.count_playlists %></p>
       </div>
