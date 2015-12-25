@@ -1,19 +1,6 @@
 <div class="container-fluid show">
   <div class="row col-lg-12">
-    <div class="search-container col-lg-12">
-      <div class="col-lg-4">
-        <h1>moosic</h1>
-      </div>
-      <div class="col-lg-4">
-        <%= render 'searchform' %>
-      </div>
-      <div class="user-info-top col-lg-4">
-        <div class="float-right">
-          <p><%= current_user.name.downcase %></p>
-          <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-small', width: 48, height: 48 %>
-        </div>
-      </div>
-    </div>
+    <%= render 'userprofileheader' %>
     <div class="user-profile-container col-lg-12">
       <div class="user-info-left col-lg-3">
         <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-big center-block', width: 250, height: 250 %>
@@ -23,7 +10,7 @@
         <p>playlists: <%= current_user.count_playlists %></p>
       </div>
       <div class="playlists-list col-lg-offset-1 col-lg-7">
-        <%= render :file => "playlists/index", :collection => @playlists %>
+        <%= render :file => 'playlists/index', :collection => @playlists %>
       </div>
     </div>
   </div>
