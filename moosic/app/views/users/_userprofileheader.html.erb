@@ -11,4 +11,10 @@
       <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-small', width: 48, height: 48 %>
     </div>
   </div>
+  <div class="user-menu">
+    <ul>
+      <li><%= link_to 'Settings', edit_user_path %></li>
+      <li><%= link_to 'Logout', logout_path, method: :delete %></</li>
+    </ul>
+  </div>
 </div>

@@ -171,6 +171,48 @@ html, body {
       float: right;
     }
   }
+
+  .user-menu {
+    display: none;
+    position: absolute;
+    height: 60px;
+    width: 250px;
+    top: 62px;
+    right: 0;
+    background-color: $base-white;
+    border: 2px solid $base-cyan;
+    z-index: $index-user-menu;
+
+    ul {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      width: 100%;
+      height: calc(100% / 2);
+      list-style-type: none;
+      @include font-size(20px);
+
+      &:first-child {
+        border-bottom: 2px solid $base-cyan;
+      }
+
+      a {
+        padding-left: 10px;
+        display: block;
+        line-height: 2em;
+        height: 100%;
+        text-decoration: none;
+        color: $base-black;
+
+        &:hover {
+          background-color: $base-gray;
+        }
+      }
+    }
+  }
 }
 
 .user-profile-container {
@@ -180,7 +222,7 @@ html, body {
   top: 40px;
   left: 0;
   text-align: center;
-  z-index: 0;
+  z-index: $index-user-container;
 
   .user-info-left {
     min-heigth: 100vh;
@@ -227,7 +269,7 @@ html, body {
 
     a:link, a:hover {
       text-decoration: none;
-      color: black;
+      color: $base-black;
     }
 
     .tile {
