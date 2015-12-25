@@ -23,7 +23,7 @@
         <p>playlists: <%= current_user.count_playlists %></p>
       </div>
       <div class="playlists-list col-lg-offset-1 col-lg-7">
-
+        <%= render :file => "playlists/index", :collection => @playlists %>
       </div>
     </div>
   </div>

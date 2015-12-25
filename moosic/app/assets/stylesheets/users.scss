@@ -5,6 +5,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html, body {
+  background-color: $base-gray;
+}
+
 .container-fluid.new {
   height: 100%;
   width: 100%;
@@ -121,11 +125,11 @@
     }
 
     .left .glyphicon  {
-      left:  0px;
+      left:  0;
     }
 
     .right .glyphicon {
-      right: 0px;
+      right: 0;
     }
 
     .left input  {
@@ -138,7 +142,7 @@
 
     .glyphicon {
       margin-right: 5px;
-      margin-top: 0px;
+      margin-top: 0;
       @include font-size(30px);
       font-weight: lighter;
     }
@@ -171,13 +175,15 @@
 
 .user-profile-container {
   padding-top: 70px;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 40px;
   left: 0;
   text-align: center;
+  z-index: 0;
 
   .user-info-left {
+    min-heigth: 100vh;
     height: 100%;
 
     .img-circle-big {
@@ -205,6 +211,48 @@
 
   .playlists-list {
     height: 100%;
+    margin-top: 40px;
+
+    div {
+      background-color: transparent;
+    }
+
+    .row {
+      box-shadow: none;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    a:link, a:hover {
+      text-decoration: none;
+      color: black;
+    }
+
+    .tile {
+      height: 200px;
+      background-color: $base-white;
+      box-shadow: 4px 4px 5px 0 rgba(50, 50, 50, 0.5);
+      text-align: left;
+
+      img {
+        height: 60%;
+        width: 100%;
+      }
+
+      h4 {
+        margin-left: 10px;
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 10px;
+        line-height: 1em;
+      }
+    }
   }
 }
 
