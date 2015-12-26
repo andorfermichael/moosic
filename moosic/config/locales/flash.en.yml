@@ -9,3 +9,8 @@ en:
         error: "Authentication failed!"
       destroy:
         info: "You have been logged out!"
+    users:
+      create:
+        success: "Sign up successfully."
+      update:
+        success: "Settings successfully saved."
