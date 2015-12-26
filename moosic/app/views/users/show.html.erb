@@ -15,7 +15,11 @@
         <p>playlists: <%= current_user.count_playlists %></p>
       </div>
       <div class="playlists-list col-lg-offset-1 col-lg-7">
-        <%= render :file => 'playlists/index', :collection => @playlists %>
+        <% if current_user.count_playlists == 0 %>
+          <h4>no playlists available</h4>
+        <% else %>
+          <%= render :file => 'playlists/index', :collection => @playlists %>
+        <% end %>
       </div>
     </div>
   </div>
