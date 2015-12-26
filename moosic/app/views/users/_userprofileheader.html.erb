@@ -17,7 +17,11 @@
   </div>
   <div class="user-menu">
     <ul>
-      <li><%= link_to 'Settings', edit_user_path %></li>
+      <% if current_user.image_url == nil %>
+        <li><%= link_to 'Settings', edit_user_path %></li>
+      <% else %>
+          <li><%= link_to 'Settings (not available with Social Login)', user_path(current_user) %></li>
+      <% end %>
       <li><%= link_to 'Logout', logout_path, method: :delete %></li>
     </ul>
   </div>
