@@ -8,13 +8,17 @@
   <div class="user-info-top col-lg-4">
     <div class="float-right">
       <p><%= current_user.name.downcase %></p>
-      <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-small', width: 48, height: 48 %>
+      <% if current_user.image_url == nil %>
+          <%= image_tag gravatar_image_url(current_user.email), alt: current_user.name, class: 'img-circle-small', width: 48, height: 48 %>
+      <% else %>
+          <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-small', width: 48, height: 48 %>
+      <% end %>
     </div>
   </div>
   <div class="user-menu">
     <ul>
       <li><%= link_to 'Settings', edit_user_path %></li>
-      <li><%= link_to 'Logout', logout_path, method: :delete %></</li>
+      <li><%= link_to 'Logout', logout_path, method: :delete %></li>
     </ul>
   </div>
 </div>

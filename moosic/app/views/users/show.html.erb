@@ -2,8 +2,13 @@
   <div class="row col-lg-12">
     <%= render 'userprofileheader' %>
     <div class="user-profile-container col-lg-12">
+      <div id="flash_messages" class="user-profile"><%= flash_messages %></div>
       <div class="user-info-left col-lg-3">
-        <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-big center-block', width: 250, height: 250 %>
+        <% if current_user.image_url == nil %>
+            <%= image_tag gravatar_image_url(current_user.email), alt: current_user.name, class: 'img-circle-big center-block', width: 250, height: 250 %>
+        <% else %>
+            <%= image_tag current_user.image_url, alt: current_user.name, class: 'img-circle-big center-block', width: 250, height: 250 %>
+        <% end %>
         <h3><%= current_user.name.downcase %></h3>
         <div class="separation-line"></div>
         <p>member since: <%= current_user.created_at.year %></p>
