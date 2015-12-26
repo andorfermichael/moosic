@@ -298,5 +298,72 @@ html, body {
   }
 }
 
+.container-fluid.update {
+  height: 100%;
+  width: 100%;
+  background-color: $base-gray;
+  display: table;
 
+  .row {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .edit-gravatar {
+    margin-bottom: 10px;
+
+    a {
+      margin-left: 10px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .input-container {
+    height: auto;
+
+    input:not([type=button]):not([type=reset]):not([type=submit]) {
+      background-color: transparent;
+      border: 2px solid rgba($base-white, 0.65);
+      border-radius: 0;
+      color: $base-black;
+    }
+
+    ::-webkit-input-placeholder {
+      color: $dark-gray;
+    }
+
+    :-moz-placeholder {
+      color: $dark-gray;
+    }
+
+    ::-moz-placeholder {
+      color: $dark-gray;
+    }
+
+    :-ms-input-placeholder {
+      color: $dark-gray;
+    }
+
+    input[type=submit]{
+      display: inline-block;
+      width: 45%;
+
+      &:first-child {
+        margin-right: 9%;
+      }
+    }
+  }
+}
+
+#flash_messages.user-profile {
+  height: 60px;
+  width: 100%;
+  top: 22px;
+  left: 0;
+  position: absolute;
+  margin-top: 0;
+}
 

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :catch_cancel, :update => [:create, :update, :destroy]
+
   # GET /users
   # GET /users.json
   # Index is default view
@@ -36,9 +38,24 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to root_path
+      redirect_to(root_path, :flash => :success)
     else
       render 'new'
+    end
+  end
+
+  # Sets user to current user when rendering edit user view
+  def edit
+    @user = current_user
+  end
+
+  # Updates information of user
+  def update
+    @user = User.find(session[:user_id])
+    if @user.update_attributes(user_params)
+      redirect_to(@user, :flash => :success)
+    else
+      render 'edit'
     end
   end
 
@@ -46,5 +63,10 @@ class UsersController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  # Called when cancel button is pressed
+  def catch_cancel
+    redirect_to user_path(current_user) if params[:commit] == 'Cancel'
   end
 end
