@@ -22,12 +22,15 @@ Song.create([
 Playlist.create([
   {name: "Chillout", user_id: 1},
   {name: "LoungeMusic", user_id: 1},
-  {name: "Motivational", user_id: 3}
+  {name: "Motivational", user_id: 3},
+  {name: "EDM", user_id: 1},
+  {name: "Progressive House", user_id: 1}
 ])
 
 
 Track.create([
   {position: 1, playlist_id: 1, song_id: 1},
   {position: 2, playlist_id: 1, song_id: 2},
+  {position: 1, playlist_id: 4, song_id: 1},
   {position: 1, playlist_id: 2, song_id: 1}
 ])
