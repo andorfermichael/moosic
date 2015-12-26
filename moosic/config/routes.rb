@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   post '/authentication', to: 'sessions#create_conventional'
   delete '/logout', to: 'sessions#destroy'
 
+  # Search routes
+  get '/search', to: 'static_pages#search'
+
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -58,3 +58,747 @@ Migrating to CreateTracks (20151203093925)
             FROM sqlite_temp_master
             WHERE name='index_tracks_on_playlist_id' AND type='index'
 
+  [1m[36m (84.6ms)[0m  [1mDROP TABLE "playlists"[0m
+  [1m[35m (98.6ms)[0m  CREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (117.7ms)[0m  CREATE  INDEX "index_playlists_on_user_id" ON "playlists" ("user_id")
+  [1m[36m (109.2ms)[0m  [1mDROP TABLE "songs"[0m
+  [1m[35m (88.3ms)[0m  CREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titel" varchar, "source" varchar, "thumbnail_url" varchar, "song_url" varchar, "host" varchar, "year" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (86.8ms)[0m  [1mDROP TABLE "tracks"[0m
+  [1m[35m (110.2ms)[0m  CREATE TABLE "tracks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "position" integer, "playlist_id" integer, "song_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (76.1ms)[0m  [1mCREATE  INDEX "index_tracks_on_playlist_id" ON "tracks" ("playlist_id")[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tracks_on_playlist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tracks_on_playlist_id' AND type='index'
+
+  [1m[36m (74.7ms)[0m  [1mCREATE  INDEX "index_tracks_on_song_id" ON "tracks" ("song_id")[0m
+  [1m[35m (98.3ms)[0m  DROP TABLE "users"
+  [1m[36m (77.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "picture_url" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (130.4ms)[0m  [1mCREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (99.3ms)[0m  [1mCREATE  INDEX "index_playlists_on_user_id" ON "playlists" ("user_id")[0m
+  [1m[35m (121.1ms)[0m  CREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titel" varchar, "source" varchar, "thumbnail_url" varchar, "song_url" varchar, "host" varchar, "year" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (98.9ms)[0m  [1mCREATE TABLE "tracks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "position" integer, "playlist_id" integer, "song_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (99.6ms)[0m  CREATE  INDEX "index_tracks_on_playlist_id" ON "tracks" ("playlist_id")
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tracks_on_playlist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tracks_on_playlist_id' AND type='index'
+[0m
+  [1m[35m (98.7ms)[0m  CREATE  INDEX "index_tracks_on_song_id" ON "tracks" ("song_id")
+  [1m[36m (98.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "picture_url" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (99.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (134.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (87.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151203093925')[0m
+  [1m[35m (99.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151203093700')
+  [1m[36m (77.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151203093909')[0m
+  [1m[35m (66.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151203093741')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (161.6ms)[0m  [1mDROP TABLE "playlists"[0m
+  [1m[35m (71.5ms)[0m  CREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (68.9ms)[0m  CREATE  INDEX "index_playlists_on_user_id" ON "playlists" ("user_id")
+  [1m[36m (99.2ms)[0m  [1mDROP TABLE "songs"[0m
+  [1m[35m (77.5ms)[0m  CREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titel" varchar, "source" varchar, "thumbnail_url" varchar, "song_url" varchar, "host" varchar, "year" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (76.8ms)[0m  [1mDROP TABLE "tracks"[0m
+  [1m[35m (99.6ms)[0m  CREATE TABLE "tracks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "position" integer, "playlist_id" integer, "song_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (76.2ms)[0m  [1mCREATE  INDEX "index_tracks_on_playlist_id" ON "tracks" ("playlist_id")[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tracks_on_playlist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tracks_on_playlist_id' AND type='index'
+
+  [1m[36m (75.2ms)[0m  [1mCREATE  INDEX "index_tracks_on_song_id" ON "tracks" ("song_id")[0m
+  [1m[35m (98.3ms)[0m  DROP TABLE "users"
+  [1m[36m (77.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "picture_url" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (80.5ms)[0m  [1mDROP TABLE "playlists"[0m
+  [1m[35m (67.9ms)[0m  CREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (97.7ms)[0m  CREATE  INDEX "index_playlists_on_user_id" ON "playlists" ("user_id")
+  [1m[36m (74.4ms)[0m  [1mDROP TABLE "songs"[0m
+  [1m[35m (78.4ms)[0m  CREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titel" varchar, "source" varchar, "thumbnail_url" varchar, "song_url" varchar, "host" varchar, "year" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (141.5ms)[0m  [1mDROP TABLE "tracks"[0m
+  [1m[35m (100.5ms)[0m  CREATE TABLE "tracks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "position" integer, "playlist_id" integer, "song_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (65.1ms)[0m  [1mCREATE  INDEX "index_tracks_on_playlist_id" ON "tracks" ("playlist_id")[0m
+  [1m[35m (0.5ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tracks_on_playlist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tracks_on_playlist_id' AND type='index'
+
+  [1m[36m (74.0ms)[0m  [1mCREATE  INDEX "index_tracks_on_song_id" ON "tracks" ("song_id")[0m
+  [1m[35m (87.2ms)[0m  DROP TABLE "users"
+  [1m[36m (65.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "picture_url" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "email", "password_digest", "picture_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "MusterMax"], ["email", "muster.max@muster.com"], ["password_digest", "$2a$10$OwZ0xY2qbsM/cq0jMaWhf.PYmxLnlgGNOtOiJkBUJb35Ius.YvDxm"], ["picture_url", "profile.com"], ["created_at", "2015-12-05 11:40:14.366134"], ["updated_at", "2015-12-05 11:40:14.366134"]]
+  [1m[35m (107.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password_digest", "picture_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "ProfiPeter"], ["email", "profi.peter@profi.com"], ["password_digest", "$2a$10$/jm9eJD87RFJN4yTfGixA.2sweJpZeJ7o8n5u/l978NLDXRgWA16e"], ["picture_url", "profile.com"], ["created_at", "2015-12-05 11:40:14.620917"], ["updated_at", "2015-12-05 11:40:14.620917"]]
+  [1m[36m (90.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "NilpferdNils"], ["email", "nilpferd.nils@nilpferd.com"], ["password_digest", "$2a$10$iRM2d4raFjjZW0v2NJmDQe2PpgYXqzychdBJKknhc3lzr4ymKwJQm"], ["created_at", "2015-12-05 11:40:14.845909"], ["updated_at", "2015-12-05 11:40:14.845909"]]
+  [1m[35m (88.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "songs" ("titel", "source", "thumbnail_url", "song_url", "host", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["titel", "Radioactive"], ["source", "ImagineDragonsVEVO"], ["thumbnail_url", "https://i.ytimg.com/vi/ktvTqknDobU/mqdefault.jpg"], ["song_url", "ktvTqknDobU"], ["host", "youtube"], ["year", "2015-09-01"], ["created_at", "2015-12-05 11:40:14.970956"], ["updated_at", "2015-12-05 11:40:14.970956"]]
+  [1m[36m (82.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "songs" ("titel", "source", "thumbnail_url", "song_url", "host", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["titel", "WILD - Back To You"], ["source", "MrSuicideSheep"], ["thumbnail_url", "https://i.ytimg.com/vi/HtcWvsiQkZE/mqdefault.jpg"], ["song_url", "HtcWvsiQkZE"], ["host", "youtube"], ["year", "2015-12-04"], ["created_at", "2015-12-05 11:40:15.058903"], ["updated_at", "2015-12-05 11:40:15.058903"]]
+  [1m[35m (106.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "playlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Chillout"], ["user_id", 1], ["created_at", "2015-12-05 11:40:15.213144"], ["updated_at", "2015-12-05 11:40:15.213144"]]
+  [1m[36m (118.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "playlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "LoungeMusic"], ["user_id", 1], ["created_at", "2015-12-05 11:40:15.335964"], ["updated_at", "2015-12-05 11:40:15.335964"]]
+  [1m[35m (84.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Motivational"], ["user_id", 3], ["created_at", "2015-12-05 11:40:15.423973"], ["updated_at", "2015-12-05 11:40:15.423973"]]
+  [1m[36m (87.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tracks" ("position", "playlist_id", "song_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["position", 1], ["playlist_id", 1], ["song_id", 1], ["created_at", "2015-12-05 11:40:15.538188"], ["updated_at", "2015-12-05 11:40:15.538188"]]
+  [1m[35m (139.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tracks" ("position", "playlist_id", "song_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["position", 2], ["playlist_id", 1], ["song_id", 2], ["created_at", "2015-12-05 11:40:15.679856"], ["updated_at", "2015-12-05 11:40:15.679856"]]
+  [1m[36m (85.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tracks" ("position", "playlist_id", "song_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["position", 1], ["playlist_id", 2], ["song_id", 1], ["created_at", "2015-12-05 11:40:15.769003"], ["updated_at", "2015-12-05 11:40:15.769003"]]
+  [1m[35m (84.5ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-05 12:41:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (11.3ms)
+Completed 200 OK in 83ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2015-12-05 12:41:26 +0100
+Processing by PlaylistsController#index as HTML
+  [1m[35mPlaylist Load (0.2ms)[0m  SELECT "playlists".* FROM "playlists"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered playlists/index.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 1659ms (Views: 1610.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/playlists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 12:41:28 +0100
+
+
+Started GET "/assets/scaffolds.self-dfddc7d7a8fb30f2f4e8e42c23266f2fc669037245f3bb09ab1e020e8b620da5.css?body=1" for 127.0.0.1 at 2015-12-05 12:41:28 +0100
+
+
+Started GET "/assets/songs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 12:41:28 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 12:41:28 +0100
+
+
+Started GET "/assets/songs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 12:41:28 +0100
+
+
+Started GET "/tracks" for 127.0.0.1 at 2015-12-05 12:42:19 +0100
+
+ActionController::RoutingError (No route matches [GET] "/tracks"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.7ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (203.6ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (48.8ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2015-12-05 12:42:25 +0100
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-05 13:15:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 2681ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (An @import loop has been found: /home/berneau/Studium/MMP2a/moosic/app/assets/stylesheets/application.scss imports itself):
+    2: <html>
+    3: <head>
+    4:   <title>Moosic</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.scss:17
+  app/assets/stylesheets/application.scss:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2209819016749787385_47050314283900'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-05 13:15:22 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 644ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (File to import not found or unreadable: scaffold.scss.
+Load paths:
+  /home/berneau/Studium/MMP2a/moosic/app/assets/images
+  /home/berneau/Studium/MMP2a/moosic/app/assets/javascripts
+  /home/berneau/Studium/MMP2a/moosic/app/assets/stylesheets
+  /home/berneau/Studium/MMP2a/moosic/vendor/assets/javascripts
+  /home/berneau/Studium/MMP2a/moosic/vendor/assets/stylesheets
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/lib/assets/javascripts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/stylesheets
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/javascripts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/fonts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/images
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>Moosic</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.scss:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2209819016749787385_47050314283900'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.8ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-05 13:15:51 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 689ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (File to import not found or unreadable: scaffold.scss.
+Load paths:
+  /home/berneau/Studium/MMP2a/moosic/app/assets/images
+  /home/berneau/Studium/MMP2a/moosic/app/assets/javascripts
+  /home/berneau/Studium/MMP2a/moosic/app/assets/stylesheets
+  /home/berneau/Studium/MMP2a/moosic/vendor/assets/javascripts
+  /home/berneau/Studium/MMP2a/moosic/vendor/assets/stylesheets
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/jquery-rails-4.0.5/vendor/assets/javascripts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/lib/assets/javascripts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/stylesheets
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/javascripts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/fonts
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/images
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.6/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>Moosic</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.scss:18
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2209819016749787385_47050314283900'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-05 13:15:59 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 2196ms (Views: 2194.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-666004a16607db005ae79f487c7d98803ffad4d3b22dcb56a481b0203c255357.css?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/songs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-05 13:16:01 +0100
+
+
+Started GET "/playlists" for 127.0.0.1 at 2015-12-05 13:16:12 +0100
+Processing by PlaylistsController#index as HTML
+  [1m[35mPlaylist Load (0.2ms)[0m  SELECT "playlists".* FROM "playlists"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered playlists/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 126ms (Views: 115.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2015-12-05 13:16:14 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (92.9ms)
+  Rendered playlists/new.html.erb within layouts/application (96.5ms)
+Completed 200 OK in 231ms (Views: 229.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2015-12-05 13:16:16 +0100
+Processing by PlaylistsController#index as HTML
+  [1m[35mPlaylist Load (0.3ms)[0m  SELECT "playlists".* FROM "playlists"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered playlists/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 107ms (Views: 105.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2015-12-05 13:16:32 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (4.0ms)
+  Rendered playlists/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 143ms (Views: 142.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-26 12:24:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (9.0ms)
+Completed 200 OK in 73ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2015-12-26 12:26:08 +0100
+Processing by PlaylistsController#index as HTML
+  [1m[35mPlaylist Load (0.2ms)[0m  SELECT "playlists".* FROM "playlists"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered playlists/index.html.erb within layouts/application (106.5ms)
+Completed 200 OK in 850ms (Views: 588.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-666004a16607db005ae79f487c7d98803ffad4d3b22dcb56a481b0203c255357.css?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/songs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-26 12:26:10 +0100
+
+
+Started GET "/playlists" for 127.0.0.1 at 2015-12-26 12:36:10 +0100
+
+ActionController::RoutingError (No route matches [GET] "/playlists"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.8ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (49.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-26 12:36:18 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (69.2ms)
+  Rendered authentication/index.html.erb within layouts/application (70.8ms)
+Completed 200 OK in 7982ms (Views: 7981.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-dc3bd20a3ef3a0d5d984ee23b3284454d1bc0b62e183c83d19e27e9318329d74.css?body=1" for 127.0.0.1 at 2015-12-26 12:36:26 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2015-12-26 12:36:26 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-26 12:36:26 +0100
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2015-12-26 12:36:26 +0100
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2015-12-26 12:36:26 +0100
+
+
+Started GET "/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?v=4.5.0" for 127.0.0.1 at 2015-12-26 12:36:26 +0100
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-12-26 12:37:36 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (67.4ms)
+  Rendered users/new.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 145ms (Views: 130.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-12-26 12:38:03 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ej5DS57bAxSp/50onR+UkgyiEYSHwNcdtHA7D5g2jI9cWR8f9bvFrucQlD5QOXqXfWAMuEkwcozwzKx+fPsgA==", "user"=>{"name"=>"Berneau", "email"=>"bernhard.steger@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 193ms (ActiveRecord: 108.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-26 12:38:04 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (0.7ms)
+  Rendered authentication/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2015-12-26 12:38:04 +0100
+
+
+Started POST "/authentication" for 127.0.0.1 at 2015-12-26 12:38:24 +0100
+Processing by SessionsController#create_conventional as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QGgzOoqhNuF4PtmHtYMphRhjuw+2JvLnRmR995KF1pyZUa5L2wy1+5EFZaPut7I9DaSze0UdMHEDdo+qVRbgLg==", "session"=>{"email"=>"bernhard.steger@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 282ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-26 12:38:24 +0100
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 57.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2015-12-26 12:55:24 +0100
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4552ms (Views: 4541.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-26 12:55:29 +0100
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-12-26 12:55:49 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bkSlVDaOFGpDsQdQ1gAz/pauvajaYT/CCJzJ0bC32mm3fTglZyOXcKqKu3SNNKhGg2m13Cla/VRNjjuMdyTs2w=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-26 12:55:49 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (3.6ms)
+  Rendered authentication/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 146ms (Views: 145.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2015-12-26 12:55:49 +0100
+
+
+Started POST "/authentication" for 127.0.0.1 at 2015-12-26 12:55:52 +0100
+Processing by SessionsController#create_conventional as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0ROLuFZ2QBNrjptJkLNNlCwkCtBNv/uDABWwJGVwVkgIKhbJB9vDCYK1J23Lh9YsOeMCpL6EORVFB0J5ouNg+g==", "session"=>{"email"=>"bernhard.steger@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 86ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-26 12:55:52 +0100
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2015-12-26 12:55:59 +0100
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2015-12-26 12:57:35 +0100
+
+ActionController::RoutingError (No route matches [GET] "/playlists"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.8ms)
+
+
+Started GET "/playlist" for 127.0.0.1 at 2015-12-26 12:57:43 +0100
+
+ActionController::RoutingError (No route matches [GET] "/playlist"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/berneau/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.6ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2015-12-26 12:58:17 +0100
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.1ms)
