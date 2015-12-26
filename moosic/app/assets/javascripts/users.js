@@ -13,4 +13,9 @@ $(document).ready(function(){
   $('body').on('click', function(){
       $('.user-menu').hide();
   });
+
+    // Let flash messages in user profile disappear after specific time period
+    window.setTimeout(function() {
+        $('#flash_messages.user-profile').fadeOut(1000)
+    }, 2500);
 });
