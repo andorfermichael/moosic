@@ -11,6 +11,6 @@ en:
         info: "You have been logged out!"
     users:
       create:
-        success: "Sign up successfully."
+        success: "Sign up successfully. You can login now!"
       update:
         success: "Settings successfully saved."
