@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
     # Authentication successfull
     if user
       session[:user_id] = user.id
-      redirect_to(user_path(session[:user_id]), :flash => :success)
+      redirect_to(user_path(session[:user_id]))
     else
       redirect_to(root_path, :flash => :error)
     end
