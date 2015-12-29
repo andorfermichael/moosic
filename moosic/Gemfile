@@ -60,6 +60,9 @@ gem 'html5_validators', '~> 1.3'
 # Validate e-mail addresses against RFC 2822 and RFC 3696.
 gem 'validates_email_format_of', '~> 1.6', '>= 1.6.3'
 
+# If you need to send some data to your js files and you don't want to do this with long way trough views and parsing
+gem 'gon', '~> 6.0', '>= 6.0.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
