@@ -4,9 +4,13 @@
 var currentPosition;
 var direction = 0;
 var stayAtBegin = false;
-var soundcloudWidget;
+var soundcloudWidgetElement;
 var youtubeWidgetElement;
 var youtubeWidgetObject;
+
+var prevSongButton;
+var toggleSongButton;
+var nextSongButton;
 
 // Creates an <iframe> (and YouTube player) after the API code downloads
 function onYouTubeIframeAPIReady() {
@@ -47,11 +51,17 @@ function onPlayerStateChange(event) {
             stayAtBegin = true;
             playSong();
         }
+    } else if (event.data == YT.PlayerState.PAUSED) {
+        toggleSongButton.classList.add('play-song');
+        toggleSongButton.classList.remove('pause-song');
+    } else if (event.data == YT.PlayerState.PLAYING) {
+        toggleSongButton.classList.remove('play-song');
+        toggleSongButton.classList.add('pause-song');
     }
 }
 
 // Calculates the current position in the playlist
-// -1 = Back, 0 = First Song of Playlist, 1 = Forward
+// -1 = Previous, 0 = Toggle/Special Event, 1 = Next
 function calcCurrentPosition() {
     // Back
     if (direction == -1) {
@@ -75,14 +85,16 @@ function getHost() {
 
 // Hides all available players
 function hideAllPlayers() {
-    soundcloudWidget.style.display = 'none';
+    soundcloudWidgetElement.style.display = 'none';
     youtubeWidgetElement.style.display = 'none';
 }
 
 // Decides which song from which host will be played
 function playSong() {
     if (stayAtBegin) {
-        currentPosition = 1;
+        if (direction != 0) {
+            currentPosition = 1;
+        }
         sessionStorage.currentPosition = currentPosition;
     } else {
         calcCurrentPosition();
@@ -106,25 +118,24 @@ function playSong() {
 // Handles the play of a song hosted by SoundCloud
 function playSoundCloudSong() {
     hideAllPlayers();
-    soundcloudWidget.style.display = 'block';
+    soundcloudWidgetElement.style.display = 'block';
 
     // Create the url of the song which should be played
     var newSoundUrl = 'http://api.soundcloud.com/tracks/' + gon.current_playlist_songs[currentPosition - 1].song_url;
 
-    // Playlist is either started for the first time
-    // or we are not at the end of the playlist
+    // Playlist is started for the first time
     if (!stayAtBegin) {
         // Let the player play the song
-        widget.bind(SC.Widget.Events.READY, function() {
-            widget.load(newSoundUrl, {
+        soundcloudWidgetObject.bind(SC.Widget.Events.READY, function() {
+            soundcloudWidgetObject.load(newSoundUrl, {
                 show_artwork: true,
                 auto_play: true
             });
         });
-    } else {
+    } else { // All songs from that playlist have been played
         // Load the song but do NOT play it
-        widget.bind(SC.Widget.Events.READY, function() {
-            widget.load(newSoundUrl, {
+        soundcloudWidgetObject.bind(SC.Widget.Events.READY, function() {
+            soundcloudWidgetObject.load(newSoundUrl, {
                 show_artwork: true,
                 auto_play: false
             });
@@ -133,7 +144,7 @@ function playSoundCloudSong() {
     }
 
     // Fires when song finished
-    widget.bind(SC.Widget.Events.FINISH, function() {
+    soundcloudWidgetObject.bind(SC.Widget.Events.FINISH, function() {
         direction = 1;
         if (currentPosition < gon.current_playlist_count_songs) {
             playSong();
@@ -162,10 +173,44 @@ function playYouTubeSong() {
     }
 }
 
+function nextSong() {
+    if (currentPosition < gon.current_playlist_count_songs) {
+        direction = 1;
+        playSong();
+    }
+}
+
+function prevSong() {
+    if (currentPosition > 1) {
+        direction = -1;
+        playSong();
+    }
+}
+
+function toggleSong() {
+    direction = 0;
+
+    // Song is playing
+    if (toggleSongButton.classList.contains('pause-song')) {
+        if (youtubeWidgetElement.style.display == 'block') {
+            youtubeWidgetObject.pauseVideo();
+        }
+        else if (soundcloudWidgetElement.style.display == 'block') {
+            soundcloudWidgetObject.pause();
+        }
+    } else { // Song is paused
+        if (youtubeWidgetElement.style.display == 'block') {
+            youtubeWidgetObject.playVideo();
+        }
+        else if (soundcloudWidgetElement.style.display == 'block') {
+            soundcloudWidgetObject.play();
+        }
+    }
+}
+
 $(document).ready(function() {
     // Check if player site
     if (document.getElementById('yt-widget') != null) {
-
         // Tab was opened
         if (sessionStorage.currentPosition == null) {
             // Get current position from url variable
@@ -183,6 +228,30 @@ $(document).ready(function() {
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         // Intialize the SoundCloud widget
-        soundcloudWidget = document.getElementById('sc-widget'), widget = SC.Widget(soundcloudWidget);
+        soundcloudWidgetElement = document.getElementById('sc-widget'), soundcloudWidgetObject = SC.Widget(soundcloudWidgetElement);
+
+        // Add behaviour for playing a song
+        // - Show pause button
+        soundcloudWidgetObject.bind(SC.Widget.Events.PLAY, function() {
+            toggleSongButton.classList.remove('play-song');
+            toggleSongButton.classList.add('pause-song');
+        });
+
+        // Add behaviour for pausing a song
+        // - Show play button
+        soundcloudWidgetObject.bind(SC.Widget.Events.PAUSE, function() {
+            toggleSongButton.classList.add('play-song');
+            toggleSongButton.classList.remove('pause-song');
+        });
+
+        // Get control elements
+        prevSongButton = document.getElementById('prev-song');
+        toggleSongButton = document.getElementById('toggle-song');
+        nextSongButton = document.getElementById('next-song');
+
+        // Add event listeners to control elements
+        prevSongButton.addEventListener('click', prevSong);
+        toggleSongButton.addEventListener('click', toggleSong);
+        nextSongButton.addEventListener('click', nextSong);
     }
 });
