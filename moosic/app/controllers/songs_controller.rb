@@ -4,7 +4,6 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-
     # Single track
     if params[:singletrack] === 'true'
       # Create a new song with needed attributes from url parameters
