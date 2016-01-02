@@ -15,6 +15,7 @@ User.create([
 
 Song.create([
   {titel: "Radioactive", source: "ImagineDragonsVEVO", thumbnail_url: "https://i.ytimg.com/vi/ktvTqknDobU/mqdefault.jpg", song_url: "ktvTqknDobU", host: "youtube", year: DateTime.new(2015, 9, 1,)},
+  {titel: "Payback", source: "Dimitri Vangelis & Wyman", thumbnail_url: "", song_url: "147229671", host: "soundcloud", year: DateTime.new(2015, 12, 4)},
   {titel: "WILD - Back To You", source: "MrSuicideSheep", thumbnail_url: "https://i.ytimg.com/vi/HtcWvsiQkZE/mqdefault.jpg", song_url: "HtcWvsiQkZE", host: "youtube", year: DateTime.new(2015, 12, 4)}
 ])
 
@@ -31,6 +32,7 @@ Playlist.create([
 Track.create([
   {position: 1, playlist_id: 1, song_id: 1},
   {position: 2, playlist_id: 1, song_id: 2},
+  {position: 3, playlist_id: 1, song_id: 3},
   {position: 1, playlist_id: 4, song_id: 1},
   {position: 1, playlist_id: 2, song_id: 1}
 ])
