@@ -4,24 +4,38 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    # Get playlist according to url parameter
-    @playlist = Playlist.find(params[:playlist])
 
-    # Get all tracks of that playlist ascending ordered by their position
-    tracks = Track.where('playlist_id = ?', params[:playlist]).order(position: :asc).all
+    # Single track
+    if params[:singletrack] === 'true'
+      # Create a new song with needed attributes from url parameters
+      song = Song.new
+      song.song_url = params[:songurl]
+      song.host = params[:songhost]
 
-    # Get all songs of that playlist
-    @songs = []
-    tracks.each do |track|
-      song = Song.where('id = ?', track.song_id).first
-      @songs << song if song
+      # Make song available in javascript
+      gon.current_song = song
+      gon.single_track = params[:singletrack]
+    else # Playlist
+      # Get playlist according to url parameter
+      @playlist = Playlist.find(params[:playlist])
+
+      # Get all tracks of that playlist ascending ordered by their position
+      tracks = Track.where('playlist_id = ?', params[:playlist]).order(position: :asc).all
+
+      # Get all songs of that playlist
+      @songs = []
+      tracks.each do |track|
+        song = Song.where('id = ?', track.song_id).first
+        @songs << song if song
+      end
+
+      # Make playlists, songs, count of songs and startposition available in javascript
+      gon.current_playlist = @playlist
+      gon.current_playlist_songs = @songs
+      gon.current_playlist_count_songs = Playlist.find(params[:playlist]).songs.size
+      gon.current_position = params[:startposition]
+      gon.single_track = params[:singletrack]
     end
-
-    # Make playlists, songs, count of songs and startposition available in javascript
-    gon.current_playlist = @playlist
-    gon.current_playlist_songs = @songs
-    gon.current_playlist_count_songs = Playlist.find(params[:playlist]).songs.size
-    gon.current_position = params[:startposition]
   end
 
   # GET /songs/1
