@@ -7,7 +7,7 @@ feature "native registration process", :type => :feature do
       fill_in 'user_name', :with => 'Joe'
       fill_in 'user_email', :with => 'john.doe@example.com'
       fill_in 'user_password', :with => 'TestMeIfYouC4n'
-      fill_in 'user_password_confirmation', :with => 'TestMeIfYou4Can'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYou4C4n'
     end
     click_button 'Sign up'
     expect(page).to have_content "Name is too short (minimum is 4 characters)"
@@ -19,7 +19,7 @@ feature "native registration process", :type => :feature do
       fill_in 'user_name', :with => 'Wolfgang Amadeus Johannes Chrysostomus Wolfgangus Theophilus Mozart'
       fill_in 'user_email', :with => 'john.doe@example.com'
       fill_in 'user_password', :with => 'TestMeIfYouC4n'
-      fill_in 'user_password_confirmation', :with => 'TestMeIfYou4Can'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
     end
     click_button 'Sign up'
     expect(page).to have_content "Name is too long (maximum is 30 characters)"
@@ -31,7 +31,7 @@ feature "native registration process", :type => :feature do
       fill_in 'user_name', :with => ''
       fill_in 'user_email', :with => 'john.doe@example.com'
       fill_in 'user_password', :with => 'TestMeIfYouC4n'
-      fill_in 'user_password_confirmation', :with => 'TestMeIfYou4Can'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
     end
     click_button 'Sign up'
     expect(page).to have_content "Name can't be blank"
@@ -43,7 +43,7 @@ feature "native registration process", :type => :feature do
       fill_in 'user_name', :with => 'John Doe'
       fill_in 'user_email', :with => ''
       fill_in 'user_password', :with => 'TestMeIfYouC4n'
-      fill_in 'user_password_confirmation', :with => 'TestMeIfYou4Can'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
     end
     click_button 'Sign up'
     expect(page).to have_content "Email can't be blank"
@@ -55,7 +55,7 @@ feature "native registration process", :type => :feature do
       fill_in 'user_name', :with => 'John Doe'
       fill_in 'user_email', :with => '@john.doe.at'
       fill_in 'user_password', :with => 'TestMeIfYouC4n'
-      fill_in 'user_password_confirmation', :with => 'TestMeIfYou4Can'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
     end
     click_button 'Sign up'
     expect(page).to have_content "Email-Address has no valid format"
@@ -83,5 +83,17 @@ feature "native registration process", :type => :feature do
     end
     click_button 'Sign up'
     expect(page).to have_content "Password is too short (minimum is 9 characters)"
+  end
+
+  scenario "password is too long" do
+    visit signup_path
+    within(".input-container") do
+      fill_in 'user_name', :with => 'John Doe'
+      fill_in 'user_email', :with => 'john.doe@example.com'
+      fill_in 'user_password', :with => 'I4maverystrongPasswordbut14mt00l0ng'
+      fill_in 'user_password_confirmation', :with => 'I4maverystrongPasswordbut14mt00l0ng'
+    end
+    click_button 'Sign up'
+    expect(page).to have_content "Password is too long (maximum is 20 characters)"
   end
 end
