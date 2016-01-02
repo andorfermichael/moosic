@@ -17,6 +17,11 @@
       margin-left: 40px;
       margin-top: 40px;
       margin-bottom: 100px;
+
+      @media (max-device-width: 767px) {
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -33,15 +38,21 @@
     height: 50px;
     margin-top: 40px;
 
+    @media (max-device-width: 767px) {
+      height: 30px;
+    }
+
+    @media (max-device-width: 700px) {
+      margin-top: 20px;
+    }
+
     .controls-container {
-      margin: auto;
-      width: 190px;
       height: 100%;
+      margin: auto;
     }
 
     .prev-song {
       height: 100%;
-      width: 50px;
       background: url('prev_circle_arrow.png') no-repeat;
       background-size: contain;
       display: inline-block;
@@ -50,7 +61,6 @@
 
     .play-song {
       height: 100%;
-      width: 50px;
       margin-left: 15px;
       background: url('play_circle_arrow.png') no-repeat;
       background-size: contain;
@@ -60,7 +70,6 @@
 
     .pause-song {
       height: 100%;
-      width: 50px;
       margin-left: 15px;
       background: url('pause_circle_arrow.png') no-repeat;
       background-size: contain;
@@ -70,7 +79,6 @@
 
     .next-song {
       height: 100%;
-      width: 50px;
       margin-left: 15px;
       background: url('next_circle_arrow.png') no-repeat;
       background-size: contain;

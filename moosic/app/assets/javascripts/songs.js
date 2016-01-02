@@ -231,6 +231,28 @@ function toggleSong() {
     }
 }
 
+// Adapt player size for extra small screens
+function onWindowResizeEnd(){
+    if ($(window).width() < 700) {
+        $('#yt-widget').width(500);
+        $('#yt-widget').height(260);
+        $('#sc-widget').width(500);
+        $('#sc-widget').height(260);
+    }
+    else {
+        $('#yt-widget').width(640);
+        $('#yt-widget').height(390);
+        $('#sc-widget').width(640);
+        $('#sc-widget').height(390);
+    }
+}
+
+var doit;
+window.onresize = function(){
+    clearTimeout(doit);
+    doit = setTimeout(onWindowResizeEnd, 100);
+};
+
 $(document).ready(function() {
     // Check if player site
     if (document.getElementById('yt-widget') != null) {
