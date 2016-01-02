@@ -61,7 +61,29 @@ feature "native registration process", :type => :feature do
     expect(page).to have_content "Email-Address has no valid format"
   end
 
-  scenario "password and password confirmation do NOT match" do
+  scenario "email is not unique" do
+    visit signup_path
+    within(".input-container") do
+      fill_in 'user_name', :with => 'John Doe'
+      fill_in 'user_email', :with => 'john.doe@gmail.com'
+      fill_in 'user_password', :with => 'TestMeIfYouC4n'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
+    end
+    click_button 'Sign up'
+
+    visit signup_path
+    within(".input-container") do
+      fill_in 'user_name', :with => 'John Doe'
+      fill_in 'user_email', :with => 'john.doe@gmail.com'
+      fill_in 'user_password', :with => 'TestMeIfYouC4n'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
+    end
+    click_button 'Sign up'
+
+    expect(page).to have_content "Email has already been taken"
+  end
+
+  scenario "password and password confirmation do not match" do
     visit signup_path
     within(".input-container") do
       fill_in 'user_name', :with => 'John Doe'
