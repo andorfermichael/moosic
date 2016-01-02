@@ -36,4 +36,16 @@ feature "native registration process", :type => :feature do
     click_button 'Sign up'
     expect(page).to have_content "Name is too long (maximum is 30 characters)"
   end
+
+  scenario "password is too short" do
+    visit signup_path
+    within(".input-container") do
+      fill_in 'user_name', :with => 'John Doe'
+      fill_in 'user_email', :with => 'john.doe@example.com'
+      fill_in 'user_password', :with => 'Test'
+      fill_in 'user_password_confirmation', :with => 'Test'
+    end
+    click_button 'Sign up'
+    expect(page).to have_content "Password is too short (minimum is 9 characters)"
+  end
 end
