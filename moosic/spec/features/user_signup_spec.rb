@@ -118,4 +118,16 @@ feature "native registration process", :type => :feature do
     click_button 'Sign up'
     expect(page).to have_content "Password is too long (maximum is 20 characters)"
   end
+
+  scenario "valid data and successfull registration" do
+    visit signup_path
+    within(".input-container") do
+      fill_in 'user_name', :with => 'John Doe'
+      fill_in 'user_email', :with => 'john.doe@example.com'
+      fill_in 'user_password', :with => 'I4mavstrongPassw0rd'
+      fill_in 'user_password_confirmation', :with => 'I4mavstrongPassw0rd'
+    end
+    click_button 'Sign up'
+    expect(page).to have_content "Sign up successfully. You can login now!"
+  end
 end
