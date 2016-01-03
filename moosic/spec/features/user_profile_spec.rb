@@ -30,4 +30,20 @@ feature "user profile content and features", :type => :feature do
 
     expect(page).not_to have_content "Progressive House"
   end
+
+  scenario "user profile contains correct number of playlists" do
+    user = create(:user)
+    playlist1 = create(:playlist)
+    playlist2 = FactoryGirl.create(:playlist, name: 'Chillout', user_id: 1)
+    playlist3 = FactoryGirl.create(:playlist, name: 'Progressive House', user_id: 1)
+
+    visit root_path
+    within(".input-container") do
+      fill_in 'session_email', :with => 'john.doe@example.com'
+      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+    end
+    click_button 'Log in'
+
+    expect(page).to have_content "playlists: 3"
+  end
 end
