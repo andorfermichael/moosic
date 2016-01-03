@@ -70,4 +70,17 @@ feature "user profile content and features", :type => :feature do
 
     expect(page).to have_content "member since: 2015"
   end
+
+  scenario "user profile contains correct username" do
+    user = create(:user)
+
+    visit root_path
+    within(".input-container") do
+      fill_in 'session_email', :with => 'john.doe@example.com'
+      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+    end
+    click_button 'Log in'
+
+    expect(page).to have_content user.name.downcase
+  end
 end
