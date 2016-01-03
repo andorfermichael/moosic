@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   post '/authentication', to: 'sessions#create_conventional'
   delete '/logout', to: 'sessions#destroy'
 
-  # Search routes
+  # Search route
   get '/search', to: 'static_pages#search'
+
+  # Imprint route
+  get '/imprint', to: 'static_pages#imprint'
 
   resources :users
 
