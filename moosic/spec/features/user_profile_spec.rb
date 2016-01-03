@@ -46,4 +46,28 @@ feature "user profile content and features", :type => :feature do
 
     expect(page).to have_content "playlists: 3"
   end
+
+  scenario "user profile contains correct year of user signup" do
+    user = create(:user)
+
+    visit root_path
+    within(".input-container") do
+      fill_in 'session_email', :with => 'john.doe@example.com'
+      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+    end
+    click_button 'Log in'
+
+    expect(page).to have_content "member since: 2016"
+
+    user2 = create(:user, email: 'michael.pattern@example.com', created_at: DateTime.new(2015, 1, 1))
+
+    visit root_path
+    within(".input-container") do
+      fill_in 'session_email', :with => 'michael.pattern@example.com'
+      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+    end
+    click_button 'Log in'
+
+    expect(page).to have_content "member since: 2015"
+  end
 end
