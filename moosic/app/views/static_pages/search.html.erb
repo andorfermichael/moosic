@@ -3,8 +3,8 @@
   <div class="row">
     <div class="filter-menu col-md-4 col-lg-3">
       <ul class="list-unstyled">
-        <li>Tracks</li>
-          <li id="Yt">Youtube</li>
+        <li class="active">Tracks</li>
+          <li id="Yt" class="active">Youtube</li>
           <li id="Sc">Soundcloud</li>
         <li>Playlists</li>
         <li>Users</li>
@@ -13,7 +13,9 @@
         <input type="text" id="searchInput">
       </form>
     </div>
-
+    <div class="playlist-popup">
+      <%= render 'playlists' %>
+    </div>
     <div id="result-container" class="col-md-8 col-lg-6">
     </div>
   </div>

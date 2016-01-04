@@ -2,11 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background-color: #d2d2d2;
+}
+
+
 .wrapper {
   height: 100%;
   width: 100%;
   display: table;
 }
+
 
 .row {
   vertical-align: baseline;
@@ -17,10 +23,61 @@
   display: none;
 }
 
-.active {
+
+.filter-menu {
+
+  li {
+    cursor: pointer;
+  }
+
+  .active {
+    color: #129b9b;
+  }
+
+  #Yt, #Sc {
+  margin-left: 20px;
+  }
 
 }
 
-#Yt, #Sc {
-  margin-left: 20px;
+#result-container {
+  li {
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    background-color: rgba($base-white, 1);
+    margin: 10px 0px;
+    box-shadow: 1px 1px 5px #afafaf;
+
+    img.tn, div.placeholder {
+      cursor: pointer;
+      height: 120px;
+      margin-right: 20px;
+      float: left;
+    }
+
+    span {
+      float: left;
+      width: 400px;
+      overflow-y: hidden;
+      margin-top: 20px;
+    }
+
+    .add-button {
+      margin: 10px;
+      cursor: pointer;
+      width: 32px;
+      float: right;
+    }
+  }
+  
+
+}
+
+.playlist-popup {
+  width: 200px;
+  height: 300px;
+  background-color: #345;
+  position: fixed;
+  margin: 100px auto 0px auto;
 }

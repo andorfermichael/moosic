@@ -16,9 +16,15 @@ window.onload = function() {
     $('.Sc').removeClass('hidden');
   });
 
+  $(document).on("click", ".add-button", function(e) {
+    console.log(e);
+
+    renderPlaylistDiv(e);
+  });
 }
 
 
+var resultAmount = 10;
 
 function searchByKeyword() {
   document.getElementById('result-container').innerHTML = '';
@@ -31,7 +37,7 @@ function searchByKeyword() {
 
 function youtubeRequest(keyword) {
   var request = gapi.client.youtube.search.list({
-    maxResults: 5,
+    maxResults: resultAmount,
     part: 'snippet',
     type: 'video',
     q: keyword
@@ -43,7 +49,7 @@ function youtubeRequest(keyword) {
 function soundcloudRequest(keyword) {
   SC.get('/tracks', {
     q: keyword,
-    limit: 5
+    limit: resultAmount
   }).then(function(response) {
     generateSoundcloudList(response);
   });
@@ -69,6 +75,7 @@ function generateYoutubeList(response) {
 
 function generateSoundcloudList(response) {
   var parent = document.getElementById('result-container');
+  //console.log(response);
 
   for (var i = 0; i < response.length; i++) {
     var item = response[i];
@@ -88,18 +95,32 @@ function generateSoundcloudList(response) {
 function generateListItem(id, thumbnail, title, channel, host) {
   // create list item, videoId tag and host class
   var listItem = document.createElement('li');
-  var idTag = document.createAttribute('data-video-id');
-  idTag.value = id;
   var hostClass = document.createAttribute('class');
   hostClass.value = host;
-  listItem.setAttributeNode(idTag);
   listItem.setAttributeNode(hostClass);
 
   // create thumbnail
-  var img = document.createElement('img');
-  var src = document.createAttribute('src');
-  src.value = thumbnail;
-  img.setAttributeNode(src);
+  var tn = document.createElement('img');
+  var tnClass = document.createAttribute('class');
+  tnClass.value = "tn";
+  var tnSrc = document.createAttribute('src');
+  if(thumbnail != null) tnSrc.value = thumbnail;
+  else if (host == "Yt") tnSrc.value = "/assets/yt-placeholder.png";
+  else if (host == "Sc") tnSrc.value = "/assets/sc-placeholder.png";
+  tn.setAttributeNode(tnSrc);
+  tn.setAttributeNode(tnClass);
+
+  // create menu-button
+  var add = document.createElement('img');
+  var addClass = document.createAttribute('class');
+  addClass.value = "add-button";
+  var addSrc = document.createAttribute('src');
+  addSrc.value = "/assets/add.png";
+  var idTag = document.createAttribute('data-video-id');
+  idTag.value = id;
+  add.setAttributeNode(addSrc);
+  add.setAttributeNode(idTag);
+  add.setAttributeNode(addClass);
 
   // create video title
   var titleSpan = document.createElement('span');
@@ -110,7 +131,8 @@ function generateListItem(id, thumbnail, title, channel, host) {
   channelSpan.appendChild(document.createTextNode(channel));
 
   // append to listItem
-  listItem.appendChild(img);
+  listItem.appendChild(tn);
+  listItem.appendChild(add);
   listItem.appendChild(titleSpan);
   listItem.appendChild(channelSpan);
 
@@ -119,7 +141,9 @@ function generateListItem(id, thumbnail, title, channel, host) {
 
 
 
+function renderPlaylistDiv(e) {
 
+}
 
 
 
