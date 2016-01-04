@@ -63,6 +63,10 @@ gem 'validates_email_format_of', '~> 1.6', '>= 1.6.3'
 # If you need to send some data to your js files and you don't want to do this with long way trough views and parsing
 gem 'gon', '~> 6.0', '>= 6.0.1'
 
+# ECMAScript2015
+gem 'sprockets', '>= 3.0.0'
+gem 'sprockets-es6', require: 'sprockets/es6'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
