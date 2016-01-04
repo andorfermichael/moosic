@@ -1,6 +1,9 @@
 <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
 <div class="container-fluid wrapper">
-  <div class="row">
+  <div class="row col-xs-12">
+    <%= render 'users/userprofileheader' %>
+  </div>
+  <div class="row col-xs-12">
     <div class="filter-menu col-md-4 col-lg-3">
       <ul class="list-unstyled">
         <li class="active">Tracks</li>
@@ -13,8 +16,9 @@
         <input type="text" id="searchInput">
       </form>
     </div>
-    <div class="playlist-popup">
+    <div class="playlist-popup hidden">
       <%= render 'playlists' %>
+      <p class="text-right"><span class="cancel">cancel</span></p>
     </div>
     <div id="result-container" class="col-md-8 col-lg-6">
     </div>

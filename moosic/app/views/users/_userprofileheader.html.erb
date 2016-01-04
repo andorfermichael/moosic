@@ -3,7 +3,7 @@
     <h1>moosic</h1>
   </div>
   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-    <%= render 'searchform' %>
+    <%= render 'users/searchform' %>
   </div>
   <div class="user-info-top hidden-xs col-sm-4 col-md-4 col-lg-4">
     <div class="float-right">
@@ -18,7 +18,7 @@
   <div class="user-menu">
     <ul>
       <% if current_user.image_url == nil %>
-        <li><%= link_to 'Settings', edit_user_path %></li>
+        <li><%= link_to 'Settings', edit_user_path(current_user) %></li>
       <% else %>
           <li><%= link_to 'Settings (not available with Social Login)', user_path(current_user) %></li>
       <% end %>

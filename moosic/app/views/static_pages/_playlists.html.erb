@@ -1,9 +1,9 @@
-<h1>Playlists</h1>
+<p>Add to Playlist:</p>
 
 <% if current_user.playlists.present? %>
-  <ul class="list-unstlyed">
+  <ul>
     <% current_user.playlists.each do |p| %>
-      <li><%= p.name %></li>
+      <li class="pl"><%= p.name %></li>
     <% end %>
   </ul>
 

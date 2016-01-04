@@ -6,6 +6,10 @@ body {
   background-color: #d2d2d2;
 }
 
+.container-fluid.wrapper {
+  padding: 0px;
+}
+
 
 .wrapper {
   height: 100%;
@@ -13,6 +17,9 @@ body {
   display: table;
 }
 
+li {
+  list-style-type: none;
+}
 
 .row {
   vertical-align: baseline;
@@ -44,7 +51,6 @@ body {
   li {
     float: left;
     width: 100%;
-    list-style-type: none;
     background-color: rgba($base-white, 1);
     margin: 10px 0px;
     box-shadow: 1px 1px 5px #afafaf;
@@ -70,14 +76,25 @@ body {
       float: right;
     }
   }
-  
-
 }
 
 .playlist-popup {
-  width: 200px;
-  height: 300px;
-  background-color: #345;
+  width: 400px;
+  height: auto;
   position: fixed;
-  margin: 100px auto 0px auto;
+  box-shadow: 1px 1px 5px #afafaf;
+  margin: 100px 0px 0px 500px;
+  z-index: 5;
+  background-color: $base-white;
+  padding: 10px;
+
+  p {
+    li {
+      cursor: pointer;
+    }
+    
+    span {
+      cursor: pointer;
+    }
+  }
 }
