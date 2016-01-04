@@ -21,11 +21,11 @@ feature "user profile content and features", :type => :feature do
     click_button 'Log in'
 
     expect(first("a[href='/playlists/1']")).to have_content "EDM"
-    expect(first("a[href='/playlists/1']")).to have_content "created on 03.01.2016"
+    expect(first("a[href='/playlists/1']")).to have_content "created on 04.01.2016"
     expect(first("a[href='/playlists/1']")).to have_content "2 songs"
 
     expect(first("a[href='/playlists/2']")).to have_content "Chillout"
-    expect(first("a[href='/playlists/2']")).to have_content "created on 03.01.2016"
+    expect(first("a[href='/playlists/2']")).to have_content "created on 04.01.2016"
     expect(first("a[href='/playlists/2']")).to have_content "1 songs"
 
     expect(page).not_to have_content "Progressive House"
