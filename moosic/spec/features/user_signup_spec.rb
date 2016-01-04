@@ -119,6 +119,18 @@ feature "native registration process", :type => :feature do
     expect(page).to have_content "Password is too long (maximum is 20 characters)"
   end
 
+  scenario "password is lack of at least one special character" do
+    visit signup_path
+    within(".input-container") do
+      fill_in 'user_name', :with => 'John Doe'
+      fill_in 'user_email', :with => 'john.doe@example.com'
+      fill_in 'user_password', :with => 'Ineedaspecialcharacter1'
+      fill_in 'user_password_confirmation', :with => 'Ineedaspecialcharacter1'
+    end
+    click_button 'Sign up'
+    expect(page).to have_content "Password must contain at least 1 special character"
+  end
+
   scenario "valid data and successfull registration" do
     visit signup_path
     within(".input-container") do
