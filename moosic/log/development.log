@@ -23442,3 +23442,87 @@ ActionView::Template::Error (undefined method `username' for nil:NilClass):
   Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-04 20:52:07 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (3.3ms)
+  Rendered authentication/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 688ms (Views: 678.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/search.self-12a8bbec1012b8dd12f570646a196d5e5096bc1061398542c16af80c68eae1bf.js?body=1" for 127.0.0.1 at 2016-01-04 20:52:07 +0100
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2016-01-04 20:52:08 +0100
+
+
+Started POST "/authentication" for 127.0.0.1 at 2016-01-04 20:52:14 +0100
+Processing by SessionsController#create_conventional as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4AeqtUn5kS8x/QK0p/gBrzkiU8nq9HHpY5CNuv5RYBH1psKg3fYcq4q+sk9jVcDFfJ3TZz70brIE1x2eEUxtNg==", "session"=>{"email"=>"bernhard.steger@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-04 20:52:15 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (1.0ms)
+  Rendered authentication/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2016-01-04 20:52:15 +0100
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2016-01-04 20:52:24 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JVMtopRu9gSZA4A2VyHeH1xXVjhKFXvoYsav/QUHa3ow8kW3AGF7gCJAMM2TjB91GejWlp4VZLMFgT/Z6hpmXQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-04 20:52:24 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (0.6ms)
+  Rendered authentication/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2016-01-04 20:52:24 +0100
+
+
+Started POST "/authentication" for 127.0.0.1 at 2016-01-04 20:52:27 +0100
+Processing by SessionsController#create_conventional as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MiwYCqb0Wi1JoEDCBFl6/3LcNoS4cOLaGDX/cu1fqMAnjXAfMvvXqfLj8DnA9LuVN2O2Kmxw/YF/cm9WAkKl5w==", "session"=>{"email"=>"bernhard.steger@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 85ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-04 20:52:27 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (0.6ms)
+  Rendered authentication/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 60ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2016-01-04 20:52:27 +0100
+
+
+Started POST "/authentication" for 127.0.0.1 at 2016-01-04 20:52:41 +0100
+Processing by SessionsController#create_conventional as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ce2SxjQ/0g3WkHb3lQPFJCUfxDrQxUK/SstQSCuA4SUcTPrToDBfiW3TxgxRrgROYKBElATFXeQtjMBsxJ3sAg==", "session"=>{"email"=>"bernhard.steger@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 95ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-01-04 20:52:41 +0100
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2016-01-04 20:52:50 +0100
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/_playlists.html.erb (20.3ms)
+  Rendered static_pages/search.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.4ms)
