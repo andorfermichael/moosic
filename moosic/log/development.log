@@ -23411,3 +23411,34 @@ ActionView::Template::Error (undefined method `username' for nil:NilClass):
   Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-01-04 20:43:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Username:</strong>
+    5:   <%= @user.username %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__2748041659307282106_47252026494260'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.6ms)

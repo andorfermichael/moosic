@@ -1,1 +1,11 @@
 <h1>Playlists</h1>
+
+<% if current_user.playlists.present? %>
+  <ul class="list-unstlyed">
+    <% current_user.playlists.each do |p| %>
+      <li><%= p.name %></li>
+    <% end %>
+  </ul>
+
+
+<% end %>

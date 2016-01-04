@@ -142,7 +142,11 @@ function generateListItem(id, thumbnail, title, channel, host) {
 
 
 function renderPlaylistDiv(e) {
+  var div = document.createElement('div');
+  var divClass = document.createAttribute('class');
+  divClass.value = "playlist-popup";
 
+  
 }
 
 
