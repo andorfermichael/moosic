@@ -1,5 +1,8 @@
 en:
   flash_messages:
+    defaults:
+        info: "You are already logged in!"
+        error: "Access dendied! Login for access!"
     sessions:
       create_conventional:
         success: "Login successfully!"

@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_action :check_login_state, only: [:index]
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   # GET /songs
