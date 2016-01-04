@@ -60,6 +60,13 @@ gem 'html5_validators', '~> 1.3'
 # Validate e-mail addresses against RFC 2822 and RFC 3696.
 gem 'validates_email_format_of', '~> 1.6', '>= 1.6.3'
 
+# If you need to send some data to your js files and you don't want to do this with long way trough views and parsing
+gem 'gon', '~> 6.0', '>= 6.0.1'
+
+# ECMAScript2015
+gem 'sprockets', '>= 3.0.0'
+gem 'sprockets-es6', require: 'sprockets/es6'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -69,6 +76,29 @@ gem 'validates_email_format_of', '~> 1.6', '>= 1.6.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # Rspec-rails is a testing framework for Rails 3.x and 4.x.
+  gem 'rspec-rails', '2.13.1'
+
+  # Provides integration between factory_girl and rails
+  # factory_girl is a library for setting up Ruby objects as test data
+  gem 'factory_girl_rails', '~> 4.5'
+end
+
+group :test do
+  # Is unit testing framework for Ruby, based on xUnit principles
+  gem 'test-unit', '~> 3.1', '>= 3.1.5'
+
+  # Strategies for cleaning databases. Can be used to ensure a clean state for testing
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
+
+  # Capybara is an integration testing tool for rack based web applications,
+  # it simulates how a user would interact with a website
+  gem 'capybara', '~> 2.5'
+
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners that test common Rails functionality,
+  # these tests would otherwise be much longer, more complex, and error-prone
+  gem 'shoulda-matchers', '~> 3.0', '>= 3.0.1', require: false
 end
 
 group :development do
@@ -80,5 +110,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'spring-commands-rspec'
 end
 

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/imprint', to: 'static_pages#imprint'
 
   resources :users
+  resources :playlists
+  resources :songs
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
