@@ -1,16 +1,16 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-var currentPosition;
-var direction = 0;
-var stayAtBegin = false;
-var soundcloudWidgetElement;
-var youtubeWidgetElement;
-var youtubeWidgetObject;
+let currentPosition = 0;
+let direction = 0;
+let stayAtBegin = false;
+let soundcloudWidgetElement;
+let youtubeWidgetElement;
+let youtubeWidgetObject;
 
-var prevSongButton;
-var toggleSongButton;
-var nextSongButton;
+let prevSongButton;
+let toggleSongButton;
+let nextSongButton;
 
 // Creates an <iframe> (and YouTube player) after the API code downloads
 function onYouTubeIframeAPIReady() {
