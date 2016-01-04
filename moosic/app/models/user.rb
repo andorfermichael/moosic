@@ -35,8 +35,6 @@ class User < ActiveRecord::Base
       user.email = auth['info']['email']
       user.location = auth['info']['location']
       user.image_url = auth['info']['image']
-      #password = auth['credentials']['token']
-      #user.password = password[0..5] # Satisfy not null constraint of password digest
       user.save(:validate => false)
 
       # Store user
