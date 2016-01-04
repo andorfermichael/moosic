@@ -5,11 +5,11 @@ one:
   uid: MyString
   token: MyString
   secret: MyString
-  references: 
+  user_id: 1
 
 two:
   provider: MyString
   uid: MyString
   token: MyString
   secret: MyString
-  references: 
+  user_id: 1

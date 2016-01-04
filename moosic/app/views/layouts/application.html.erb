@@ -4,15 +4,11 @@
   <title>Moosic</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= include_gon %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if current_user %>
-    <ul class="nav navbar-nav pull-right">
-      <li><%= image_tag current_user.image_url, alt: current_user.name %></li>
-      <li><%= link_to 'Log out', logout_path, method: :delete %></li>
-    </ul>
-<% end %>
+
 <%= yield %>
 
 </body>

@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  time:
+     formats:
+        european_format: '%d.%m.%Y'
