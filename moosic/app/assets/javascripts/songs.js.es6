@@ -36,7 +36,10 @@ function onYouTubeIframeAPIReady() {
 // Fires when the video player is ready
 function onPlayerReady() {
   youtubeWidgetElement = document.getElementById('yt-widget');
-  playSong();
+
+  if (getHost() == 'youtube') {
+    playSong();
+  }
 }
 
 // Fires when the player's state changes
@@ -278,18 +281,32 @@ $(document).ready(function () {
     // Intialize the SoundCloud widget
     soundcloudWidgetElement = document.getElementById('sc-widget'), soundcloudWidgetObject = SC.Widget(soundcloudWidgetElement);
 
-    // Add behaviour for playing a song
-    // - Show pause button
+    /*
+     * Add behaviour for playing a song
+     * - Show pause button
+     */
     soundcloudWidgetObject.bind(SC.Widget.Events.PLAY, function () {
       toggleSongButton.classList.remove('play-song');
       toggleSongButton.classList.add('pause-song');
     });
 
-    // Add behaviour for pausing a song
-    // - Show play button
+    /*
+     * Add behaviour for playing a song
+     * - Show play button
+     */
     soundcloudWidgetObject.bind(SC.Widget.Events.PAUSE, function () {
       toggleSongButton.classList.add('play-song');
       toggleSongButton.classList.remove('pause-song');
+    });
+
+    /*
+     * Add behaviour for soundcloud api ready state
+     * - Play song
+     */
+    soundcloudWidgetObject.bind(SC.Widget.Events.PAUSE, function () {
+      if (getHost() == 'soundcloud') {
+        playSong();
+      }
     });
 
     // Get control elements
