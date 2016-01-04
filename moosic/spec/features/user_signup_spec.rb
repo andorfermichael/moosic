@@ -58,7 +58,7 @@ feature "native registration process", :type => :feature do
       fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
     end
     click_button 'Sign up'
-    expect(page).to have_content "Email-Address has no valid format"
+    expect(page).to have_content "Email has no valid format"
   end
 
   scenario "email is not unique" do
@@ -66,8 +66,8 @@ feature "native registration process", :type => :feature do
     within(".input-container") do
       fill_in 'user_name', :with => 'John Doe'
       fill_in 'user_email', :with => 'john.doe@gmail.com'
-      fill_in 'user_password', :with => 'TestMeIfYouC4n'
-      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
+      fill_in 'user_password', :with => 'TestMeIfYouC4n!'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n!'
     end
     click_button 'Sign up'
 
@@ -76,7 +76,7 @@ feature "native registration process", :type => :feature do
       fill_in 'user_name', :with => 'John Doe'
       fill_in 'user_email', :with => 'john.doe@gmail.com'
       fill_in 'user_password', :with => 'TestMeIfYouC4n'
-      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n'
+      fill_in 'user_password_confirmation', :with => 'TestMeIfYouC4n!'
     end
     click_button 'Sign up'
 
@@ -100,8 +100,8 @@ feature "native registration process", :type => :feature do
     within(".input-container") do
       fill_in 'user_name', :with => 'John Doe'
       fill_in 'user_email', :with => 'john.doe@example.com'
-      fill_in 'user_password', :with => 'Test'
-      fill_in 'user_password_confirmation', :with => 'Test'
+      fill_in 'user_password', :with => 'Test1!'
+      fill_in 'user_password_confirmation', :with => 'Test1!'
     end
     click_button 'Sign up'
     expect(page).to have_content "Password is too short (minimum is 9 characters)"
@@ -112,8 +112,8 @@ feature "native registration process", :type => :feature do
     within(".input-container") do
       fill_in 'user_name', :with => 'John Doe'
       fill_in 'user_email', :with => 'john.doe@example.com'
-      fill_in 'user_password', :with => 'I4maverystrongPasswordbut14mt00l0ng'
-      fill_in 'user_password_confirmation', :with => 'I4maverystrongPasswordbut14mt00l0ng'
+      fill_in 'user_password', :with => 'I4maverystrongPasswordbut14mt00l0ng!'
+      fill_in 'user_password_confirmation', :with => 'I4maverystrongPasswordbut14mt00l0ng!'
     end
     click_button 'Sign up'
     expect(page).to have_content "Password is too long (maximum is 20 characters)"
@@ -124,8 +124,8 @@ feature "native registration process", :type => :feature do
     within(".input-container") do
       fill_in 'user_name', :with => 'John Doe'
       fill_in 'user_email', :with => 'john.doe@example.com'
-      fill_in 'user_password', :with => 'I4mavstrongPassw0rd'
-      fill_in 'user_password_confirmation', :with => 'I4mavstrongPassw0rd'
+      fill_in 'user_password', :with => 'I4mavstrongPassw0rd!'
+      fill_in 'user_password_confirmation', :with => 'I4mavstrongPassw0rd!'
     end
     click_button 'Sign up'
     expect(page).to have_content "Sign up successfully. You can login now!"

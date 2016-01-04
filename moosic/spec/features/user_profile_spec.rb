@@ -16,7 +16,7 @@ feature "user profile content and features", :type => :feature do
     visit root_path
     within(".input-container") do
       fill_in 'session_email', :with => 'john.doe@example.com'
-      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+      fill_in 'session_password', :with => 'Very2trongPa22w0rd!'
     end
     click_button 'Log in'
 
@@ -40,7 +40,7 @@ feature "user profile content and features", :type => :feature do
     visit root_path
     within(".input-container") do
       fill_in 'session_email', :with => 'john.doe@example.com'
-      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+      fill_in 'session_password', :with => 'Very2trongPa22w0rd!'
     end
     click_button 'Log in'
 
@@ -53,7 +53,7 @@ feature "user profile content and features", :type => :feature do
     visit root_path
     within(".input-container") do
       fill_in 'session_email', :with => 'john.doe@example.com'
-      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+      fill_in 'session_password', :with => 'Very2trongPa22w0rd!'
     end
     click_button 'Log in'
 
@@ -64,7 +64,7 @@ feature "user profile content and features", :type => :feature do
     visit root_path
     within(".input-container") do
       fill_in 'session_email', :with => 'michael.pattern@example.com'
-      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+      fill_in 'session_password', :with => 'Very2trongPa22w0rd!'
     end
     click_button 'Log in'
 
@@ -77,7 +77,7 @@ feature "user profile content and features", :type => :feature do
     visit root_path
     within(".input-container") do
       fill_in 'session_email', :with => 'john.doe@example.com'
-      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+      fill_in 'session_password', :with => 'Very2trongPa22w0rd!'
     end
     click_button 'Log in'
 
@@ -90,7 +90,7 @@ feature "user profile content and features", :type => :feature do
     visit root_path
     within(".input-container") do
       fill_in 'session_email', :with => 'john.doe@example.com'
-      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+      fill_in 'session_password', :with => 'Very2trongPa22w0rd!'
     end
     click_button 'Log in'
 
@@ -103,7 +103,7 @@ feature "user profile content and features", :type => :feature do
     visit root_path
     within(".input-container") do
       fill_in 'session_email', :with => 'john.doe@example.com'
-      fill_in 'session_password', :with => 'Myvery2trongPa22w0rd'
+      fill_in 'session_password', :with => 'Very2trongPa22w0rd!'
     end
     click_button 'Log in'
 

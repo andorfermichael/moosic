@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :check_login_state, only: [:show, :edit]
   before_filter :catch_cancel, :update => [:create, :update, :destroy]
 
   # GET /users

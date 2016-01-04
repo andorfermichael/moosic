@@ -5,8 +5,12 @@ class User < ActiveRecord::Base
 
   validates_confirmation_of :password
   validates :email, uniqueness: true
-  validates :email, :email_format => { :message => 'Email-Address has no valid format' }
+  validates :email, :email_format => { :message => 'has no valid format' }
   validates :name, :email, :password, :password_confirmation, presence: true
+  validates :password, :format => {:with => /\A(?=.*[a-z]).+\z/, message: 'must contain at least 1 lowercase character'}
+  validates :password, :format => {:with => /\A(?=.*[A-Z]).+\z/, message: 'must contain at least 1 uppercase character'}
+  validates :password, :format => {:with => /\A(?=.*[\W]).+\z/, message: 'must contain at least 1 special character'}
+  validates :password, :format => {:with => /\A(?=.*\d).+\z/, message: 'must contain at least 1 digit'}
   validates :name, length: { in: 4..30 }
   validates :password, length: { in: 9..20 }
 

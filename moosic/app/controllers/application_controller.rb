@@ -15,5 +15,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def check_login_state
+    if !session[:user_id]
+      redirect_to(root_path, :flash => :error)
+    end
+  end
+
   helper_method :current_user
 end
