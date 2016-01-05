@@ -5959,3 +5959,1179 @@ Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:08:20 +0100
 Processing by PlaylistsController#index as HTML
   Rendered playlists/index.html.erb within layouts/application (9.9ms)
 Completed 200 OK in 151ms (Views: 149.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-05 01:16:25 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 88ms (Views: 83.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:17:05 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 453ms (Views: 431.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-05 01:17:06 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (116.6ms)
+Completed 200 OK in 197ms (Views: 178.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/songs?singletrack=true&songhost=youtube&songurl=ktvTqknDobU" for 127.0.0.1 at 2016-01-05 01:17:20 +0100
+Processing by SongsController#index as HTML
+  Parameters: {"singletrack"=>"true", "songhost"=>"youtube", "songurl"=>"ktvTqknDobU"}
+  Rendered songs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 102ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2016-01-05 01:17:20 +0100
+
+
+Started GET "/assets/prev_circle_arrow.png" for 127.0.0.1 at 2016-01-05 01:17:20 +0100
+
+
+Started GET "/assets/pause_circle_arrow.png" for 127.0.0.1 at 2016-01-05 01:17:20 +0100
+
+
+Started GET "/assets/next_circle_arrow.png" for 127.0.0.1 at 2016-01-05 01:17:20 +0100
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:17:23 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-05 01:22:25 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 81ms (Views: 78.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:23:04 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:24:46 +0100
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:24:48 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (277.9ms)
+  Rendered playlists/new.html.erb within layouts/application (281.8ms)
+Completed 200 OK in 392ms (Views: 391.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:37:29 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (2.9ms)
+  Rendered playlists/new.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/berneau/Studium/MMP2a/moosic/app/views/playlists/_form.html.erb:19: syntax error, unexpected =>, expecting ')'
+/home/berneau/Studium/MMP2a/moosic/app/views/playlists/_form.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/berneau/Studium/MMP2a/moosic/app/views/playlists/_form.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+/home/berneau/Studium/MMP2a/moosic/app/views/playlists/_form.html.erb:30: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/playlists/_form.html.erb:19: syntax error, unexpected =>, expecting ')'
+  app/views/playlists/_form.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+  app/views/playlists/_form.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/playlists/_form.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+  app/views/playlists/new.html.erb:3:in `_app_views_playlists_new_html_erb__2418110309769618115_70201638695020'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.1ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:38:00 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (12.2ms)
+  Rendered playlists/new.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:13:in `current_user'
+  app/views/playlists/_form.html.erb:18:in `block in _app_views_playlists__form_html_erb___4275671819137431711_70201516059240'
+  app/views/playlists/_form.html.erb:1:in `_app_views_playlists__form_html_erb___4275671819137431711_70201516059240'
+  app/views/playlists/new.html.erb:3:in `_app_views_playlists_new_html_erb__2418110309769618115_70201638695020'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.6ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.6ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:38:06 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-05 01:38:08 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:38:10 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (3.8ms)
+  Rendered playlists/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:13:in `current_user'
+  app/views/playlists/_form.html.erb:18:in `block in _app_views_playlists__form_html_erb___4275671819137431711_70201634143920'
+  app/views/playlists/_form.html.erb:1:in `_app_views_playlists__form_html_erb___4275671819137431711_70201634143920'
+  app/views/playlists/new.html.erb:3:in `_app_views_playlists_new_html_erb__2418110309769618115_70201620627500'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.9ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:38:11 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (6.0ms)
+  Rendered playlists/new.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:13:in `current_user'
+  app/views/playlists/_form.html.erb:18:in `block in _app_views_playlists__form_html_erb___4275671819137431711_70201516059240'
+  app/views/playlists/_form.html.erb:1:in `_app_views_playlists__form_html_erb___4275671819137431711_70201516059240'
+  app/views/playlists/new.html.erb:3:in `_app_views_playlists_new_html_erb__2418110309769618115_70201638695020'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.8ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:38:26 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (3.0ms)
+  Rendered playlists/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 68ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:38:26 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:26 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:38:27 +0100
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:38:46 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 121ms (Views: 119.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-05 01:38:47 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (2.8ms)
+  Rendered authentication/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-05 01:38:47 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (1.0ms)
+  Rendered authentication/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2016-01-05 01:38:47 +0100
+
+
+Started POST "/authentication" for 127.0.0.1 at 2016-01-05 01:38:49 +0100
+Processing by SessionsController#create_conventional as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q3n19iuS66ihbfz5Z2dYcvZ/DOU1s96iUPNMeJ+mdQC+2J3jv51mLBouTAKjypkYs8CMS+Gzwfk3tNxccLt4Jw==", "session"=>{"email"=>"bernhard.steger@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-05 01:38:49 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (0.8ms)
+  Rendered authentication/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2016-01-05 01:38:49 +0100
+
+
+Started GET "/signup" for 127.0.0.1 at 2016-01-05 01:38:54 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.6ms)
+  Rendered users/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 110ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-01-05 01:39:18 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C1DMgbVLB0XdeQm6lH9eQ7iEOwH7TXB3Okg6x0+0e38e8aSUIUSKwWY6uUFQ0p8p/Tu7ry9NbyxdD6rjoKl2WA==", "user"=>{"name"=>"berneau", "email"=>"bernhard.steger@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 264ms (ActiveRecord: 165.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-05 01:39:18 +0100
+Processing by AuthenticationController#index as HTML
+  Rendered authentication/_form.html.erb (0.6ms)
+  Rendered authentication/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 122ms (Views: 121.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background-blurred.jpg" for 127.0.0.1 at 2016-01-05 01:39:18 +0100
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:39:30 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:39:33 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (4.8ms)
+  Rendered playlists/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 83ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/playlists" for 127.0.0.1 at 2016-01-05 01:40:10 +0100
+Processing by PlaylistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJGbHVbsUTNgd/jWpbkzHoDBUXyklmkblCcjo3rHwyyBMPMIwuPct9s0SC1hFPJ0xX7R0nCWdkDzYLOHldrOCw==", "playlist"=>{"name"=>"test", "user_id"=>"1"}, "commit"=>"Create Playlist"}
+Redirected to http://localhost:3000/playlists/6
+Completed 302 Found in 272ms (ActiveRecord: 263.2ms)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2016-01-05 01:40:10 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendered playlists/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:40:13 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2016-01-05 01:40:15 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendered playlists/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 97ms (Views: 95.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:41:48 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2016-01-05 01:41:53 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendered playlists/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 101ms (Views: 98.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:43:48 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/6" for 127.0.0.1 at 2016-01-05 01:43:50 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendered playlists/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/playlists/6" for 127.0.0.1 at 2016-01-05 01:43:54 +0100
+Processing by PlaylistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KkV11NM80yz/80J9jSTPxADtHls3JO1LTDYag6KAZQE/5B3BRzNeqESw8oZJiQ6uRVKe9eMk8hArcYqnTZ1oJg==", "id"=>"6"}
+Redirected to http://localhost:3000/playlists
+Completed 302 Found in 179ms (ActiveRecord: 172.6ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:43:54 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2016-01-05 01:44:22 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendered playlists/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2016-01-05 01:44:27 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendered playlists/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-05 01:44:29 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 91ms (Views: 89.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2016-01-05 01:46:40 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendered playlists/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 120ms (Views: 116.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:46:44 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (83.2ms)
+  Rendered playlists/new.html.erb within layouts/application (84.2ms)
+Completed 200 OK in 166ms (Views: 165.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (5.6ms)
+  Rendered playlists/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 83ms (Views: 81.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:47:40 +0100
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (16.4ms)
+  Rendered playlists/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 125ms (Views: 122.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:07 +0100
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (9.3ms)
+  Rendered playlists/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:48:28 +0100
+
+
+Started POST "/playlists" for 127.0.0.1 at 2016-01-05 01:48:34 +0100
+Processing by PlaylistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbFZOc4GQyiJapV7UJWZLO4YbPDe90EWC7A4h6vNxpsQEDEsWgnOrDIpJYCUOFhGq6fsXgr3Xk1s96ijRNDLvA==", "playlist"=>{"name"=>"Ambient", "user_id"=>"1"}, "commit"=>"Create Playlist"}
+Redirected to http://localhost:3000/playlists/7
+Completed 302 Found in 268ms (ActiveRecord: 263.0ms)
+
+
+Started GET "/playlists/7" for 127.0.0.1 at 2016-01-05 01:48:34 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendered playlists/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:48:42 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/7" for 127.0.0.1 at 2016-01-05 01:48:44 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendered playlists/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/playlists/7" for 127.0.0.1 at 2016-01-05 01:48:50 +0100
+Processing by PlaylistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"43REyRGFDToRmeST21yYz6P930HTZay+VHrwil05Hb721SzchYqAvqraVGgf8Vml5kJf7wdls+UzPWCusiQQmQ==", "id"=>"7"}
+Redirected to http://localhost:3000/playlists
+Completed 302 Found in 170ms (ActiveRecord: 165.8ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:48:50 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 91ms (Views: 89.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/playlists/5" for 127.0.0.1 at 2016-01-05 01:49:51 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendered playlists/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 104ms (Views: 102.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:49:54 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 108ms (Views: 106.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 118ms (Views: 116.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:26 +0100
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:50:43 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:50:43 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:44 +0100
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:50:57 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 124ms (Views: 122.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:50:58 +0100
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 96ms (Views: 94.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-eed26b2a176ef9f2a4702d4bd71ca3a9fc0afb247e5a6327b305047e4fd5db85.css?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/users.self-e2a763081c7af9f210e5bcb54f50aecde5d6b218940afae7134a1da60da15d79.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:19 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:20 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:20 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:20 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-05 01:51:20 +0100
+
+
+Started GET "/playlists/new" for 127.0.0.1 at 2016-01-05 01:51:24 +0100
+Processing by PlaylistsController#new as HTML
+  Rendered playlists/_form.html.erb (10.0ms)
+  Rendered playlists/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 111ms (Views: 109.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2016-01-05 01:51:25 +0100
+Processing by PlaylistsController#index as HTML
+  Rendered playlists/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/playlists/4" for 127.0.0.1 at 2016-01-05 01:51:43 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendered playlists/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 107ms (Views: 104.4ms | ActiveRecord: 0.5ms)

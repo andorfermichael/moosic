@@ -1,4 +1,4 @@
-<h1>Playlist</h1>
+<h1><%= @playlist.name %></h1>
 
 <% if @playlist.tracks.present? %>
   <%= link_to "Start Playlist", songs_path(:playlist => @playlist.id, :startposition => 1, :singletrack => false) , :target => "_blank" %>
