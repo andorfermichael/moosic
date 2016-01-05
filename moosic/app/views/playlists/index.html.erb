@@ -1,3 +1,5 @@
+
+
 <div class="visible-xs-block">
   <% @playlists.each_slice(1) do |playlist_slice| %>
       <div class="row col-xs-12">
@@ -73,3 +75,5 @@
       </div>
   <% end %>
 </div>
+
+<%= link_to "Create new Playlist", new_playlist_path %>
