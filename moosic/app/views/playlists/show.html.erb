@@ -10,7 +10,6 @@
       <%= image_tag "play.png" %>
     <% end %>
   <% end %>
-  
 </div>
 
 
@@ -20,7 +19,11 @@
     <% @playlist.tracks.each do |t| %>
       <li>
         <%= link_to(songs_path(:songurl => t.song.song_url, :songhost => t.song.host, :singletrack => true), :target => "_blank") do %>
-          <%= image_tag t.song.thumbnail_url %>
+          <% if t.song.thumbnail_url.present? %>
+            <%= image_tag t.song.thumbnail_url %>
+          <%else %>
+            <%= image_tag "yt-placeholder.png" %>
+          <% end %>
           <div>
             <span><%= t.song.titel %></span><br>
             <span><%= t.song.source %></span>
@@ -33,7 +36,6 @@
   <% else %>
     <p>No Songs in this Playlist!</p>
   <% end %>
-
 </div>
 
 <div class="playlist-header">

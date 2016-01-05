@@ -28,8 +28,12 @@
     height: 120px;
   }
 
-  div, span {
+  div {
     display: inline-block;
+  }
+
+  span {
+    padding: 10px 10px 0px 10px;
   }
 
   .delete {
