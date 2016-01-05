@@ -1,3 +1,43 @@
 // Place all the styles related to the playlists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.playlist-header{
+  padding: 20px;
+
+  span {
+    font-size: 36px;
+    vertical-align: middle;
+  }
+
+  img {
+    width: 32px;
+  }
+}
+
+
+.songlist {
+  li {
+    list-style-type: none;
+    background-color: $base_white;
+    margin-top: 10px;
+    box-shadow: 1px 1px 5px #afafaf;
+  }
+
+  img {
+    height: 120px;
+  }
+
+  div {
+    display: inline-block;
+  }
+
+  span {
+    padding: 10px 10px 0px 10px;
+  }
+
+  .delete {
+    float: right;
+  }
+
+}
