@@ -23,4 +23,4 @@
 </div>
 
 <%= link_to "Delete Playlist", @playlist, method: :delete, data: { confirm: "Are you sure?" } %><br>
-<%= link_to "Back to Playlists", playlists_path %>
+<%= link_to "Back to Playlists", user_path(session[:user_id]) %>
