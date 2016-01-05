@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.playlist-header{
+  padding: 20px;
+
+  span {
+    font-size: 36px;
+    vertical-align: middle;
+  }
+
+  img {
+    width: 32px;
+  }
+}
+
 
 .songlist {
   li {
@@ -9,7 +22,18 @@
     background-color: $base_white;
     margin-top: 10px;
     box-shadow: 1px 1px 5px #afafaf;
-    padding: 10px;
+  }
+
+  img {
+    height: 120px;
+  }
+
+  div, span {
+    display: inline-block;
+  }
+
+  .delete {
+    float: right;
   }
 
 }
