@@ -1,0 +1,9 @@
+<% if @playlists_filtered.present? %>
+  <ul>
+    <% @playlists_filtered.each do |p| %>
+      <li><%= link_to p.name, p %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No Playlists found...</p>
+<% end %>

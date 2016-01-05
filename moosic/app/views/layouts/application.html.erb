@@ -24,7 +24,7 @@
         <div class="inner right">
           <i class="glyphicon glyphicon-search"></i>
           <%= form_tag search_path, :method => :get do %>
-            <%= text_field_tag :search, params[:search], class: "search-field form-control", placeholder: "Search..." %>
+            <%= text_field_tag :search, params[:search], class: "search-field form-control", id: "search_input", placeholder: "Search..." %>
           <% end %>
         </div>
       </div>

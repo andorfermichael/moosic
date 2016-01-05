@@ -1,8 +1,11 @@
 window.onload = function() {
 
-	initializeSoundcloud()
+	initializeSoundcloud();
 
 	$('#Yt').click(function() {
+		$('#playlists').removeClass('active');
+		$('#users').removeClass('active');
+		$('#tracks').addClass('active');
 		$('#Yt').addClass('active');
 		$('#Sc').removeClass('active');
 		$('.Sc').addClass('hidden');
@@ -10,17 +13,34 @@ window.onload = function() {
 	});
 
 	$('#Sc').click(function() {
+		$('#playlists').removeClass('active');
+		$('#users').removeClass('active');
+		$('#tracks').addClass('active');
 		$('#Sc').addClass('active');
 		$('#Yt').removeClass('active');
 		$('.Yt').addClass('hidden');
 		$('.Sc').removeClass('hidden');
 	});
 
+	$('#users').click(function() {
+		$('#playlists').removeClass('active');
+		$('#tracks').removeClass('active');
+		$('#Yt').removeClass('active');
+		$('#Sc').removeClass('active');
+		$('#users').addClass('active');
+	});
+
+	$('#playlists').click(function() {
+		$('#users').removeClass('active');
+		$('#tracks').removeClass('active');
+		$('#Yt').removeClass('active');
+		$('#Sc').removeClass('active');
+		$('#playlists').addClass('active');
+	});
+
 	$('.cancel').click(function() {
 		$('.playlist-popup').addClass('hidden');
 	});
-
-	//$('')
 
 	$(document).on("click", ".add-button", function(e) {
 		console.log(e);
@@ -34,7 +54,7 @@ var resultAmount = 10;
 
 function searchByKeyword() {
 	document.getElementById('result-container').innerHTML = '';
-	var keyword = $('#searchInput').val();
+	var keyword = $('#search_input').val();
 
 	youtubeRequest(keyword);
 	soundcloudRequest(keyword);

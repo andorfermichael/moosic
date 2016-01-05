@@ -8,10 +8,14 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   # Search route
-  get '/search', to: 'static_pages#search'
+  get 'search', to: 'static_pages#search'
 
   # Imprint route
-  get '/imprint', to: 'static_pages#imprint'
+  get 'imprint', to: 'static_pages#imprint'
+
+
+  get 'search/filter_user', to: 'users#search', as: 'filter_user'
+  get 'playlists/search', to: 'playlists#search', as: 'filter_playlist'
 
   resources :users
   resources :playlists

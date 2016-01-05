@@ -1,16 +1,15 @@
 <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
 <div class="container-fluid wrapper">
   <div class="row col-xs-12">
-    <%= render 'users/userprofileheader' %>
   </div>
   <div class="row col-xs-12">
     <div class="filter-menu col-md-4 col-lg-3">
       <ul class="list-unstyled">
-        <li class="active">Tracks</li>
+        <li id="tracks" class="active">Tracks</li>
           <li id="Yt" class="active">Youtube</li>
           <li id="Sc">Soundcloud</li>
-        <li>Playlists</li>
-        <li>Users</li>
+        <li id="playlists"><%= link_to "Playlists", filter_playlist_path, :remote => true %></li>
+        <li id="users"><%= link_to "Users", filter_user_path, :remote => true %></li>
       </ul>
       <form onsubmit="searchByKeyword();return false;">
         <input type="text" id="searchInput">
@@ -21,6 +20,7 @@
       <p class="text-right"><span class="cancel">cancel</span></p>
     </div>
     <div id="result-container" class="col-md-8 col-lg-6">
+      
     </div>
   </div>
 </div>

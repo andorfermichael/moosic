@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_login_state, only: [:show, :edit]
+  before_action :check_login_state, :set_user, only: [:show, :edit]
   before_filter :catch_cancel, :update => [:create, :update, :destroy]
 
   # GET /users
@@ -9,8 +9,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    # Get all playlists from current user
-    @playlists = Playlist.where(user_id: session[:user_id]).all
+    # Get all playlists from user matching url
+    @playlists = Playlist.where(user_id: @user.id).all
 
     # For each playlist store the image url of the first song of the playlist plus the count of songs
     # as an additional information
@@ -74,6 +74,10 @@ class UsersController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
   # Called when cancel button is pressed
