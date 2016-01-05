@@ -1,7 +1,26 @@
 <h1>Playlist</h1>
 
-<%= link_to 'Run Playlist', songs_path(:playlist => 1, :startposition => 1, :singletrack => false) , :target => '_blank' %>
-<br>
-<%= link_to 'Run Song', songs_path(:songurl => 'HtcWvsiQkZE', :songhost => 'youtube', :singletrack => true), :target => '_blank' %>
+<% if @playlist.tracks.present? %>
+  <%= link_to "Start Playlist", songs_path(:playlist => @playlist.id, :startposition => 1, :singletrack => false) , :target => "_blank" %>
+<% end %>
 
-<!--TODO: Replace with real playlist and song data links-->
+<div class="container-fluid">
+  <% if @playlist.tracks.present? %>
+  <ul class="songlist col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <% @playlist.tracks.each do |t| %>
+      <li>
+        <%= link_to(songs_path(:songurl => t.song.song_url, :songhost => t.song.host, :singletrack => true), :target => "_blank") do %>
+          <p><%= t.song.titel %></p>
+          <p><%= t.song.source %></p>
+        <% end %>
+        <p class="text-right"><%= link_to "Delete", t, method: :delete, data: { confirm: "Are you sure?" } %></p>
+
+      </li>
+    <% end %>
+  </ul>
+  <% else %>
+    <p>No Songs in this Playlist!</p>
+  <% end %>
+</div>
+
+<%= link_to "Back to Playlists", playlists_path %>
