@@ -1,7 +1,43 @@
-<h1>Playlist</h1>
+<div class="playlist-header">
+  <span><%= @playlist.name %></span>
 
-<%= link_to 'Run Playlist', songs_path(:playlist => 1, :startposition => 1, :singletrack => false) , :target => '_blank' %>
-<br>
-<%= link_to 'Run Song', songs_path(:songurl => 'HtcWvsiQkZE', :songhost => 'youtube', :singletrack => true), :target => '_blank' %>
+  <%= link_to @playlist, method: :delete, data: { confirm: "Are you sure?" } do %>
+    <%= image_tag "trash.png" %>
+  <% end %>
 
-<!--TODO: Replace with real playlist and song data links-->
+  <% if @playlist.tracks.present? %>
+    <%= link_to songs_path(:playlist => @playlist.id, :startposition => 1, :singletrack => false) , :target => "_blank" do %>
+      <%= image_tag "play.png" %>
+    <% end %>
+  <% end %>
+</div>
+
+
+<div class="container-fluid">
+  <% if @playlist.tracks.present? %>
+  <ul class="songlist col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <% @playlist.tracks.each do |t| %>
+      <li>
+        <%= link_to(songs_path(:songurl => t.song.song_url, :songhost => t.song.host, :singletrack => true), :target => "_blank") do %>
+          <% if t.song.thumbnail_url.present? %>
+            <%= image_tag t.song.thumbnail_url %>
+          <%else %>
+            <%= image_tag "yt-placeholder.png" %>
+          <% end %>
+          <div>
+            <span><%= t.song.titel %></span><br>
+            <span><%= t.song.source %></span>
+          </div>
+        <% end %>
+        <span class="delete" ><%= link_to "Delete", t, method: :delete, data: { confirm: "Are you sure?" } %></span>
+      </li>
+    <% end %>
+  </ul>
+  <% else %>
+    <p>No Songs in this Playlist!</p>
+  <% end %>
+</div>
+
+<div class="playlist-header">
+  <%= link_to "Back to Playlists", user_path(session[:user_id]) %>
+</div>
