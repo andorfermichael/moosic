@@ -52,7 +52,7 @@ window.onload = function() {
 	});
 
 	$('.pl').click(function(e) {
-		
+
 		var elems = tempObj.childNodes;
 		if(tempObj.className == "Yt") host = "youtube";
 		else host = "soundcloud";
@@ -62,7 +62,7 @@ window.onload = function() {
         type:'GET',
         data: { "title": elems[2].innerText,
         				"source": elems[3].innerText,
-        				"thumbnail_url": "https://i.ytimg.com/vi_webp/" + tempObj.dataset.video_id + "/mqdefault.webp",
+        				"thumbnail_url": "https://i.ytimg.com/vi/" + tempObj.dataset.video_id + "/mqdefault.jpg",
         				"song_url": tempObj.dataset.video_id,
         				"host": host,
         				"playlist_id": e.target.dataset.playlist_id
