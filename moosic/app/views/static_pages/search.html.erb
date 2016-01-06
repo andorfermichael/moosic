@@ -11,12 +11,9 @@
         <li id="playlists"><%= link_to "Playlists", filter_playlist_path, :remote => true %></li>
         <li id="users"><%= link_to "Users", filter_user_path, :remote => true %></li>
       </ul>
-      <form onsubmit="searchByKeyword();return false;">
-        <input type="text" id="searchInput">
-      </form>
     </div>
     <div class="playlist-popup hidden">
-      <%= render 'playlists' %>
+      <%= render "playlists" %>
       <p class="text-right"><span class="cancel">cancel</span></p>
     </div>
     <div id="result-container" class="col-md-8 col-lg-6">

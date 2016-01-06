@@ -3,9 +3,9 @@
 <% if current_user.playlists.present? %>
   <ul>
     <% current_user.playlists.each do |p| %>
-      <li class="pl"><%= p.name %></li>
+      <li class="pl" data-playlist_id="<%= p.id %>">
+        <%= p.name %>
+      </li>
     <% end %>
   </ul>
-
-
 <% end %>

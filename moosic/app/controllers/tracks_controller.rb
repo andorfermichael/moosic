@@ -4,7 +4,7 @@ class TracksController < ApplicationController
   def destroy
     @track.destroy
     respond_to do |format|
-      format.html { redirect_to playlist_url, notice: 'Track successfully deleted.' }
+      format.html { redirect_to :back, notice: 'Track successfully deleted.' }
       format.json { head :no_content }
     end
   end

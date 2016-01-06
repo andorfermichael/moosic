@@ -1,6 +1,7 @@
 window.onload = function() {
 
 	initializeSoundcloud();
+	var tempObj;
 
 	$('#Yt').click(function() {
 		$('#playlists').removeClass('active');
@@ -10,6 +11,8 @@ window.onload = function() {
 		$('#Sc').removeClass('active');
 		$('.Sc').addClass('hidden');
 		$('.Yt').removeClass('hidden');
+
+		searchByKeyword();
 	});
 
 	$('#Sc').click(function() {
@@ -20,6 +23,7 @@ window.onload = function() {
 		$('#Yt').removeClass('active');
 		$('.Yt').addClass('hidden');
 		$('.Sc').removeClass('hidden');
+
 	});
 
 	$('#users').click(function() {
@@ -43,9 +47,33 @@ window.onload = function() {
 	});
 
 	$(document).on("click", ".add-button", function(e) {
-		console.log(e);
-
 		$('.playlist-popup').removeClass('hidden');
+		tempObj = e.target.parentElement;
+	});
+
+	$('.pl').click(function(e) {
+		
+		var elems = tempObj.childNodes;
+		if(tempObj.className == "Yt") host = "youtube";
+		else host = "soundcloud";
+
+		$.ajax({
+        url:'add_to_playlist',
+        type:'GET',
+        data: { "title": elems[2].innerText,
+        				"source": elems[3].innerText,
+        				"thumbnail_url": "https://i.ytimg.com/vi_webp/" + tempObj.dataset.video_id + "/mqdefault.webp",
+        				"song_url": tempObj.dataset.video_id,
+        				"host": host,
+        				"playlist_id": e.target.dataset.playlist_id
+        },
+        success:function(data){
+        },
+        error:function(data){
+            console.log(data);
+        }
+    });
+    $('.playlist-popup').addClass('hidden');
 	});
 }
 
@@ -123,6 +151,9 @@ function generateListItem(id, thumbnail, title, channel, host) {
 	var listItem = document.createElement('li');
 	var hostClass = document.createAttribute('class');
 	hostClass.value = host;
+	var idTag = document.createAttribute('data-video_id');
+	idTag.value = id;
+	listItem.setAttributeNode(idTag);
 	listItem.setAttributeNode(hostClass);
 
 	// create thumbnail
@@ -142,10 +173,7 @@ function generateListItem(id, thumbnail, title, channel, host) {
 	addClass.value = "add-button";
 	var addSrc = document.createAttribute('src');
 	addSrc.value = "/assets/add.png";
-	var idTag = document.createAttribute('data-video-id');
-	idTag.value = id;
 	add.setAttributeNode(addSrc);
-	add.setAttributeNode(idTag);
 	add.setAttributeNode(addClass);
 
 	// create video title
