@@ -83,20 +83,22 @@ html, body {
   .row {
     margin: 0;
     padding: 0;
-    box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.30);
+    box-shadow: 0 3px 4px 0 rgba(50, 50, 50, 0.5);
   }
 }
 
 .user-profile-header {
-  height: 100%;
+  height: 60px;
   width: 100%;
   padding: 7px 15px;
   background-color: $base-white;
   display: table-cell;
   vertical-align: middle;
+  z-index: $index-profile-header;
 
-  @media (max-device-width: 767px) {
+  @media (max-width: 767px) {
     padding-bottom: 20px;
+    height: 132px;
   }
 
   h1 {
@@ -105,7 +107,7 @@ html, body {
     line-height: 48px;
     @include font-size(50px);
 
-    @media (max-device-width: 767px) {
+    @media (max-width: 767px) {
       text-align: center;
       margin-bottom: 10px;
     }
@@ -167,7 +169,7 @@ html, body {
       font-weight: lighter;
       @include font-size(30px);
 
-      @media (min-device-width: 768px) and (max-device-width: 991px) {
+      @media (min-width: 768px) and (max-width: 991px) {
         @include font-size(24px);
       }
     }
@@ -190,13 +192,13 @@ html, body {
     position: absolute;
     height: 60px;
     width: 250px;
-    top: 62px;
+    top: 60px;
     right: 0;
     background-color: $base-white;
     border: 2px solid $base-cyan;
     z-index: $index-user-menu;
 
-    @media (max-device-width: 767px) {
+    @media (max-width: 767px) {
       width: 100%;
       top: 133px;
       text-align: center;
@@ -226,7 +228,7 @@ html, body {
         text-decoration: none;
         color: $base-black;
 
-        @media (max-device-width: 767px) {
+        @media (max-width: 767px) {
           padding-left: 0;
         }
 
@@ -240,24 +242,18 @@ html, body {
 
 .user-profile-container {
   padding-top: 70px;
-  height: 100%;
+  height: auto;
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 0;
   text-align: center;
   z-index: $index-user-container;
 
-  @media (max-device-width: 767px) {
-    top: 140px;
-  }
+
 
   .user-info-left {
     min-heigth: 100vh;
     height: auto;
-
-    @media (max-device-width: 767px) {
-      margin-bottom: 40px;
-    }
 
     .img-circle-big {
       border-radius: 50%;
@@ -266,17 +262,17 @@ html, body {
     }
 
     img {
-      @media (max-device-width: 767px) {
+      @media (max-width: 767px) {
         width: 200px;
         height: 200px;
       }
 
-      @media (min-device-width: 768px) and (max-device-width: 991px) {
+      @media (min-width: 768px) and (max-width: 991px) {
         width: 150px;
         height: 150px;
       }
 
-      @media (min-device-width: 992px) and (max-device-width: 1199px) {
+      @media (min-width: 992px) and (max-width: 1199px) {
           width: 200px;
           height: 200px;
       }
@@ -289,7 +285,7 @@ html, body {
       width: 220px;
       border-top: 2px solid $base-black;
 
-      @media (min-device-width: 768px) and (max-device-width: 991px) {
+      @media (min-width: 768px) and (max-width: 991px) {
         width: 130px;
       }
     }
@@ -301,7 +297,7 @@ html, body {
         margin-top: -10px;
       }
 
-      @media (min-device-width: 768px) and (max-device-width: 991px) {
+      @media (min-width: 768px) and (max-width: 991px) {
         @include font-size(24px);
       }
     }
@@ -322,7 +318,7 @@ html, body {
         margin-bottom: 30px;
       }
 
-      @media (max-device-width: 767px) {
+      @media (max-width: 767px) {
         &:last-child {
           margin-bottom: 40px;
         }
@@ -340,7 +336,7 @@ html, body {
       box-shadow: 4px 4px 5px 0 rgba(50, 50, 50, 0.5);
       text-align: left;
 
-      @media (min-device-width: 768px) and (max-device-width: 991px) {
+      @media (min-width: 768px) and (max-width: 991px) {
         height: 160px;
       }
 
@@ -348,7 +344,7 @@ html, body {
         height: 60%;
         width: 100%;
 
-        @media (min-device-width: 768px) and (max-device-width: 991px) {
+        @media (min-width: 768px) and (max-width: 991px) {
           height: 55%;
         }
       }
@@ -357,7 +353,7 @@ html, body {
         margin-left: 10px;
         margin-bottom: 0;
 
-        @media (min-device-width: 768px) and (max-device-width: 991px) {
+        @media (min-width: 768px) and (max-width: 991px) {
           @include font-size(24px);
         }
       }
@@ -368,7 +364,7 @@ html, body {
         margin-left: 10px;
         line-height: 1em;
 
-        @media (min-device-width: 768px) and (max-device-width: 991px) {
+        @media (min-width: 768px) and (max-width: 991px) {
           @include font-size(20px);
         }
       }
@@ -439,12 +435,12 @@ html, body {
 #flash_messages.user-profile {
   height: 60px;
   width: 100%;
-  top: 22px;
+  top: 0;
   left: 0;
   position: absolute;
   margin-top: 0;
 
-  @media (max-device-width: 767px) {
+  @media (max-width: 767px) {
     top: -7px;
   }
 }

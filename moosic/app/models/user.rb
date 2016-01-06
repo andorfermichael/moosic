@@ -47,4 +47,10 @@ class User < ActiveRecord::Base
     end
     return a.user
   end # def self.find_or_create_with_omniauth(auth)
+
+
+  def self.search(query)
+    where("name LIKE ?", "%#{query}%" )
+  end
+
 end

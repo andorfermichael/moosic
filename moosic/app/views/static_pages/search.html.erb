@@ -1,0 +1,29 @@
+<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+<div class="container-fluid wrapper">
+  <div class="row col-xs-12">
+  </div>
+  <div class="row col-xs-12">
+    <div class="filter-menu col-md-4 col-lg-3">
+      <ul class="list-unstyled">
+        <li id="tracks">
+          <%= image_tag "track.png", alt: "track", class: "menu-icon"%>
+          Tracks
+        </li>
+        <li id="playlists">
+          <%= image_tag "playlist.png", alt: "playlist", class: "menu-icon" %>
+          <%= link_to "Playlists", filter_playlist_path, :remote => true %>
+        </li>
+        <li id="users">
+          <%= image_tag "user.png", alt: "user", class: "menu-icon" %>
+          <%= link_to "Users", filter_user_path, :remote => true %>
+        </li>
+      </ul>
+    </div>
+    <div class="playlist-popup hidden">
+      <%= render "playlists" %>
+      <p class="text-right"><span class="cancel">cancel</span></p>
+    </div>
+    <div id="result-container" class="col-md-8 col-lg-6">
+    </div>
+  </div>
+</div>

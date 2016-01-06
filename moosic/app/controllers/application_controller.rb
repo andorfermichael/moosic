@@ -10,8 +10,6 @@ class ApplicationController < ActionController::Base
     @current_user = nil
     if session[:user_id]
       @current_user ||= User.where(id: session[:user_id]).first
-      @current_user.count_playlists = User.find(session[:user_id]).playlists.size
-      @current_user
     end
   end
 

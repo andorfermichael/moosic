@@ -5,4 +5,8 @@ class Playlist < ActiveRecord::Base
 
   attr_accessor :image_url
   attr_accessor :count_songs
+
+  def self.search(query)
+    where("name LIKE ?", "%#{query}%" )
+  end
 end
