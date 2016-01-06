@@ -53,8 +53,11 @@ window.onload = function () {
   $('.pl').click(function (e) {
     const elems = tempObj.childNodes;
 
-    if (tempObj.className == 'Yt') var host = 'youtube';
-    else var host = 'soundcloud';
+    if (tempObj.className == 'Yt')  {
+      var host = 'youtube';
+    } else { 
+      var host = 'soundcloud';
+    }
 
     $.ajax({
       url: 'add_to_playlist',
@@ -68,7 +71,7 @@ window.onload = function () {
         "playlist_id": e.target.dataset.playlist_id
       },
       success: function (data) {
-        alert('Successfully added to Playlist')
+        alert('Successfully added to Playlist.')
       },
       error: function (data) {
         alert('Failed to add song to Playlist.');

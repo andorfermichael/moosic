@@ -1,9 +1,10 @@
-<% if @users_filtered.present? %>
+<% if users_filtered.present? %>
   <ul>
-    <% @users_filtered.each do |u| %>
+    <% users_filtered.each do |u| %>
       <li><%= link_to u.name, u %></li>
     <% end %>
   </ul>
 <% else %>
   <p>No Users found...</p>
 <% end %>
+

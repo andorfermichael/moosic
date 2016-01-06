@@ -12,6 +12,7 @@ class StaticPagesController < ApplicationController
   end
 
   def user_filter
+    @query = 'b'
     respond_to do |format|
       format.js { render 'user_filter.js.erb' }
     end

@@ -13,7 +13,7 @@
                     <%= image_tag playlist.image_url, alt: playlist.name, class: 'center-block' %>
                     <h4><%= playlist.name %></h4>
                     <p class="create-date">created on <%= l playlist.created_at, format: :european_format %></p>
-                    <p class="count-songs"><%= playlist.count_songs %> songs</p>
+                    <p class="count-songs"><%= playlist.tracks.count %> songs</p>
                   </div>
               <% end %>
             </div>
@@ -32,7 +32,7 @@
                     <%= image_tag playlist.image_url, alt: playlist.name, class: 'center-block' %>
                     <h4><%= playlist.name %></h4>
                     <p class="create-date">created on <%= l playlist.created_at, format: :european_format %></p>
-                    <p class="count-songs"><%= playlist.count_songs %> songs</p>
+                    <p class="count-songs"><%= playlist.tracks.count %> songs</p>
                   </div>
               <% end %>
             </div>
@@ -51,7 +51,7 @@
                     <%= image_tag playlist.image_url, alt: playlist.name, class: 'center-block' %>
                     <h4><%= playlist.name %></h4>
                     <p class="create-date">created on <%= l playlist.created_at, format: :european_format %></p>
-                    <p class="count-songs"><%= playlist.count_songs %> songs</p>
+                    <p class="count-songs"><%= playlist.tracks.count %> songs</p>
                   </div>
               <% end %>
             </div>
@@ -70,7 +70,7 @@
                     <%= image_tag playlist.image_url, alt: playlist.name, class: 'center-block' %>
                     <h4><%= playlist.name %></h4>
                     <p class="create-date">created on <%= l playlist.created_at, format: :european_format %></p>
-                    <p class="count-songs"><%= playlist.count_songs %> songs</p>
+                    <p class="count-songs"><%= playlist.tracks.count %> songs</p>
                   </div>
               <% end %>
             </div>

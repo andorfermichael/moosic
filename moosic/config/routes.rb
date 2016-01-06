@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   get 'imprint', to: 'static_pages#imprint'
 
   # Search partial routes
-  get 'search/:search/filter_user', to: 'static_pages#user_filter', utf8: '✓', search: :search, as: 'filter_user'
-  get 'search/:search/filter_playlist', to: 'static_pages#playlist_filter', utf8: '✓', search: :search, as: 'filter_playlist'
+  get 'filter_user', to: 'static_pages#user_filter'
+  get 'search/filter_playlist', to: 'static_pages#playlist_filter', as: 'filter_playlist'
 
   # Add Song to Playlist route
   get 'add_to_playlist', to: 'static_pages#add_to_playlist'
