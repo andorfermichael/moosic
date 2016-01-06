@@ -83,7 +83,7 @@ html, body {
   .row {
     margin: 0;
     padding: 0;
-    box-shadow: 0 5px 4px 0 rgba(50, 50, 50, 0.30);
+    box-shadow: 0 3px 4px 0 rgba(50, 50, 50, 0.5);
   }
 }
 
@@ -94,6 +94,7 @@ html, body {
   background-color: $base-white;
   display: table-cell;
   vertical-align: middle;
+  z-index: $index-profile-header;
 
   @media (max-width: 767px) {
     padding-bottom: 20px;
