@@ -3,13 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: #d2d2d2;
+  background-color: $base-gray;
 }
 
 .container-fluid.wrapper {
-  padding: 0px;
+  padding: 0;
 }
-
 
 .wrapper {
   height: 100%;
@@ -25,11 +24,9 @@ li {
   vertical-align: baseline;
 }
 
-
 .hidden {
   display: none;
 }
-
 
 .filter-menu {
 
@@ -38,11 +35,11 @@ li {
   }
 
   .active {
-    color: #129b9b;
+    color: $base-cyan;
   }
 
   #Yt, #Sc {
-  margin-left: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -51,7 +48,7 @@ li {
     float: left;
     width: 100%;
     background-color: rgba($base-white, 1);
-    margin: 10px 0px;
+    margin: 10px 0;
     box-shadow: 1px 1px 5px #afafaf;
 
     img.tn, div.placeholder {
@@ -81,9 +78,9 @@ li {
   width: 400px;
   height: auto;
   position: fixed;
-  box-shadow: 1px 1px 5px #afafaf;
-  margin: 100px 0px 0px 500px;
-  z-index: 5;
+  box-shadow: 1px 1px 5px $dark-gray;
+  margin: 100px 0 0 500px;
+  z-index: $index-playlist-popup;
   background-color: $base-white;
   padding: 10px;
 

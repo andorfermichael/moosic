@@ -8,17 +8,17 @@
         <li id="tracks" class="active">Tracks</li>
           <li id="Yt" class="active">Youtube</li>
           <li id="Sc">Soundcloud</li>
-        <li id="playlists"><%= link_to "Playlists", filter_playlist_path, :remote => true %></li>
-        <li id="users"><%= link_to "Users", filter_user_path, :remote => true %></li>
+        <li id="playlists"><%= link_to 'Playlists', filter_playlist_path, :remote => true %></li>
+        <li id="users"><%= link_to 'Users', filter_user_path, :remote => true %></li>
       </ul>
     </div>
     <div class="playlist-popup hidden">
-      <%= render "playlists" %>
+      <%= render 'playlists' %>
       <p class="text-right"><span class="cancel">cancel</span></p>
     </div>
     <div id="result-container" class="col-md-8 col-lg-6">
-      <%= render "user_filter" %>
-      <%= render "playlist_filter" %>
+      <%= render 'user_filter' %>
+      <%= render 'playlist_filter' %>
     </div>
   </div>
 </div>
