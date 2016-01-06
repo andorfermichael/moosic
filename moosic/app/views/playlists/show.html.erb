@@ -1,8 +1,10 @@
 <div class="playlist-header">
   <span><%= @playlist.name %></span>
 
-  <%= link_to @playlist, method: :delete, data: { confirm: "Are you sure?" } do %>
-    <%= image_tag "trash.png" %>
+  <% if @playlist.user == current_user %>
+    <%= link_to @playlist, method: :delete, data: { confirm: "Are you sure?" } do %>
+      <%= image_tag "trash.png" %>
+    <% end %>
   <% end %>
 
   <% if @playlist.tracks.present? %>
@@ -29,7 +31,9 @@
             <span><%= t.song.source %></span>
           </div>
         <% end %>
-        <span class="delete" ><%= link_to "Delete", t, method: :delete, data: { confirm: "Are you sure?" } %></span>
+        <% if @playlist.user == current_user %>
+          <span class="delete" ><%= link_to "Delete", t, method: :delete, data: { confirm: "Are you sure?" } %></span>
+        <% end %>
       </li>
     <% end %>
   </ul>
@@ -39,5 +43,5 @@
 </div>
 
 <div class="playlist-header">
-  <%= link_to "Back to Playlists", user_path(session[:user_id]) %>
+  <%= link_to "Back to Playlists", :back %>
 </div>
