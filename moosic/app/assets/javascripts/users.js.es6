@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(function () {
-  if (window.width >= 768) {
+  if ($(window).width() >= 768) {
     // Show menu
     $('.user-info-top').on('mouseenter', function () {
       $('.user-menu').show();
