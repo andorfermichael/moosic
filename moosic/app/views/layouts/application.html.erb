@@ -31,8 +31,13 @@
     </div>
 <% end %>
   </div>
+
+  <div class="hidden-xs col-sm-1 col-md-1 col-lg-2">
+    <p class="imprint"><%= link_to "Imprint", imprint_path %></p>
+  </div>
+
   <%= link_to user_path(current_user) do %>
-  <div class="user-info-top hidden-xs col-sm-4 col-md-4 col-lg-4">
+  <div class="user-info-top hidden-xs col-sm-3 col-md-3 col-lg-2">
     <div class="float-right">
       <p><%= current_user.name.downcase %></p>
       <% if current_user.image_url == nil %>
