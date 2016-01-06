@@ -1,18 +1,16 @@
-<%= if true
-  users_filtered
-end %>
+
 
 <% if users_filtered.present? %>
   <ul>
-    <% users_filtered.each do |key, value| %>
-      <!--<li><%= link_to "test", "test" %></li>-->
-      <li><%= puts value %></li>
+    <% users_filtered.each do |user| %>
+        <% user.each_pair do |key, value| %>
+            <p><%= key %>: <%= value %></p><br>
+        <% end %>
     <% end %>
   </ul>
 <% else %>
-  <p>No Users found...</p>
-<% end %>
 
+<% end %>
 
   <% for item in users_filtered %>
     <%= item[:name] %>
