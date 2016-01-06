@@ -1,8 +1,6 @@
 window.onload = function () {
 
   initializeSoundcloud();
-  let tempObj;
-  const resultAmount = 10;
 
   $('#Yt').click(function () {
     $('#playlists').removeClass('active');
@@ -55,11 +53,8 @@ window.onload = function () {
   $('.pl').click(function (e) {
     const elems = tempObj.childNodes;
 
-    if (tempObj.className == 'Yt') {
-      host = 'youtube';
-    } else {
-      host = 'soundcloud';
-    }
+    if (tempObj.className == 'Yt') var host = 'youtube';
+    else var host = 'soundcloud';
 
     $.ajax({
       url: 'add_to_playlist',
@@ -83,6 +78,9 @@ window.onload = function () {
     $('.playlist-popup').addClass('hidden');
   });
 }
+
+let tempObj;
+const resultAmount = 10;
 
 function searchByKeyword() {
   document.getElementById('result-container').innerHTML = '';
@@ -112,7 +110,7 @@ function soundcloudRequest(keyword) {
 }
 
 function generateYoutubeList(response) {
-  var parent = document.getElementById('result-container');
+  const parent = document.getElementById('result-container');
 
   for (let i = 0; i < response.items.length; i++) {
     let item = response.items[i];
@@ -130,7 +128,7 @@ function generateYoutubeList(response) {
 }
 
 function generateSoundcloudList(response) {
-  var parent = document.getElementById('result-container');
+  const parent = document.getElementById('result-container');
 
   for (let i = 0; i < response.length; i++) {
     let item = response[i];

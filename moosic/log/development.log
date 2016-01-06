@@ -49884,3 +49884,956 @@ Started GET "/assets/next_circle_arrow.png" for 127.0.0.1 at 2016-01-05 20:54:33
 
 
 Started GET "/assets/play_circle_arrow.png" for 127.0.0.1 at 2016-01-05 20:54:38 +0100
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 13:46:57 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (42.5ms)
+  Rendered static_pages/_user_filter.html.erb (1.0ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.8ms)
+  Rendered static_pages/search.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 7128ms (Views: 7068.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:04 +0100
+
+
+Started GET "/assets/application.self-0654388d3762a5ae7a3475121d41fec64b7e56785e0d11d115cb67ddfeddeb0d.css?body=1" for 127.0.0.1 at 2016-01-06 13:47:04 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:04 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:04 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/search.self-a71a3a51ee41039583e9c2d7c1ed7e7ee6b46a5df720206bd7e3600e3ba4e403.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/users.self-be05dad6dc07dc6f95c2c0412b78ace14beb4d8faeb93811de080918954da3ad.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-06 13:47:05 +0100
+
+
+Started GET "/assets/favicon-c8ab887d20a7b95264839546445569a20b0d6081c76b9326656cc7e1588fa36f.ico" for 127.0.0.1 at 2016-01-06 13:47:06 +0100
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 13:47:26 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (3.5ms)
+  Rendered static_pages/_user_filter.html.erb (0.6ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.4ms)
+  Rendered static_pages/search.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 932ms (Views: 929.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-0654388d3762a5ae7a3475121d41fec64b7e56785e0d11d115cb67ddfeddeb0d.css?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/search.self-a71a3a51ee41039583e9c2d7c1ed7e7ee6b46a5df720206bd7e3600e3ba4e403.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/users.self-be05dad6dc07dc6f95c2c0412b78ace14beb4d8faeb93811de080918954da3ad.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:27 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:28 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:28 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-06 13:47:28 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 13:47:28 +0100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-06 13:47:28 +0100
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 13:48:53 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (4.6ms)
+  Rendered static_pages/_user_filter.html.erb (0.5ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.5ms)
+  Rendered static_pages/search.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 92ms (Views: 89.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-0654388d3762a5ae7a3475121d41fec64b7e56785e0d11d115cb67ddfeddeb0d.css?body=1" for 127.0.0.1 at 2016-01-06 13:48:53 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/search.self-a71a3a51ee41039583e9c2d7c1ed7e7ee6b46a5df720206bd7e3600e3ba4e403.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/users.self-be05dad6dc07dc6f95c2c0412b78ace14beb4d8faeb93811de080918954da3ad.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-06 13:48:54 +0100
+
+
+Started GET "/assets/sc-placeholder.png" for 127.0.0.1 at 2016-01-06 13:52:14 +0100
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2016-01-06 13:52:14 +0100
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 13:54:47 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (8.1ms)
+  Rendered static_pages/_user_filter.html.erb (0.9ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.7ms)
+  Rendered static_pages/search.html.erb within layouts/application (142.2ms)
+Completed 200 OK in 1044ms (Views: 1041.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-0654388d3762a5ae7a3475121d41fec64b7e56785e0d11d115cb67ddfeddeb0d.css?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/search.self-b7aa208b4d056599f90ff47f98c6b7ad3d046292fc74883b3fea11f047d9dba4.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/users.self-be05dad6dc07dc6f95c2c0412b78ace14beb4d8faeb93811de080918954da3ad.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:48 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-06 13:54:49 +0100
+
+
+Started GET "/assets/sc-placeholder.png" for 127.0.0.1 at 2016-01-06 13:54:56 +0100
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2016-01-06 13:54:56 +0100
+
+
+Started GET "/add_to_playlist?title=NCS%3A+The+Best+of+2015+%5BAlbum+Mix%5D&source=NoCopyrightSounds&thumbnail_url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fe3kG0x9f_kQ%2Fmqdefault.jpg&song_url=e3kG0x9f_kQ&host=youtube&playlist_id=1" for 127.0.0.1 at 2016-01-06 13:55:00 +0100
+Processing by StaticPagesController#add_to_playlist as */*
+  Parameters: {"title"=>"NCS: The Best of 2015 [Album Mix]", "source"=>"NoCopyrightSounds", "thumbnail_url"=>"https://i.ytimg.com/vi/e3kG0x9f_kQ/mqdefault.jpg", "song_url"=>"e3kG0x9f_kQ", "host"=>"youtube", "playlist_id"=>"1"}
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 332ms (ActiveRecord: 285.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-01-06 13:55:00 +0100
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  Rendered playlists/index.html.erb (13.1ms)
+  Rendered users/show.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 130ms (Views: 91.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-01-06 13:55:04 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/index.html.erb (4.7ms)
+  Rendered users/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 135ms (Views: 123.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-06 13:55:06 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 90ms (Views: 88.4ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/tracks/63" for 127.0.0.1 at 2016-01-06 13:55:15 +0100
+Processing by TracksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fFuYBRQu4L6QPt3B4ZmKm2SmDqGsIR2clRR0V5gT6e7gm4HDhRCQ8qxZ8jWpF8kZ8W/jhbE0Lag1T8sNytX/9A==", "id"=>"63"}
+Redirected to http://localhost:3000/playlists/1
+Completed 302 Found in 358ms (ActiveRecord: 352.8ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-06 13:55:15 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 13:55:19 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (4.0ms)
+  Rendered static_pages/_user_filter.html.erb (0.6ms)
+  Rendered static_pages/_playlist_filter.html.erb (1.7ms)
+  Rendered static_pages/search.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 87ms (Views: 85.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 13:56:39 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (3.2ms)
+  Rendered static_pages/_user_filter.html.erb (0.9ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.8ms)
+  Rendered static_pages/search.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 930ms (Views: 927.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-0654388d3762a5ae7a3475121d41fec64b7e56785e0d11d115cb67ddfeddeb0d.css?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/search.self-b7aa208b4d056599f90ff47f98c6b7ad3d046292fc74883b3fea11f047d9dba4.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/users.self-be05dad6dc07dc6f95c2c0412b78ace14beb4d8faeb93811de080918954da3ad.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-06 13:56:40 +0100
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 13:59:09 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (7.5ms)
+  Rendered static_pages/_user_filter.html.erb (1.6ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.9ms)
+  Rendered static_pages/search.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 930ms (Views: 926.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-0654388d3762a5ae7a3475121d41fec64b7e56785e0d11d115cb67ddfeddeb0d.css?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/search.self-5bab8f9710f1a3cb4ef62cfcd5ebe5313b37eb9d3e003b7d1f4a7a2d2706af5a.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/users.self-be05dad6dc07dc6f95c2c0412b78ace14beb4d8faeb93811de080918954da3ad.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 13:59:10 +0100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-06 13:59:11 +0100
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 13:59:25 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (3.4ms)
+  Rendered static_pages/_user_filter.html.erb (0.5ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.4ms)
+  Rendered static_pages/search.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 992ms (Views: 990.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-0654388d3762a5ae7a3475121d41fec64b7e56785e0d11d115cb67ddfeddeb0d.css?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/search.self-59efc2330d9557d460d6ecd0e3ada7ae6c104c8853004837c6f1f3031280226c.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/users.self-be05dad6dc07dc6f95c2c0412b78ace14beb4d8faeb93811de080918954da3ad.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-06 13:59:26 +0100
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 14:01:08 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (3.2ms)
+  Rendered static_pages/_user_filter.html.erb (0.5ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.4ms)
+  Rendered static_pages/search.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 624ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (SyntaxError: /home/berneau/Studium/MMP2a/moosic/app/assets/javascripts/search.js.es6: Unexpected token (57:35)
+  55 |     const elems = tempObj.childNodes;
+  56 | 
+> 57 |     if (tempObj.className == 'Yt') let host = 'youtube';
+     |                                    ^
+  58 |     else let host = 'soundcloud';
+  59 | 
+  60 |     $.ajax({):
+    4:   <title>Moosic</title>
+    5:   <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
+    6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= favicon_link_tag 'favicon.ico' %>
+    9:   <%= include_gon %>
+   10:   <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___829906405386194741_47035392759540'
+
+
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/berneau/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&utf8=%E2%9C%93&search=ncs" for 127.0.0.1 at 2016-01-06 14:01:22 +0100
+Processing by StaticPagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ncs"}
+  Rendered static_pages/_playlists.html.erb (5.3ms)
+  Rendered static_pages/_user_filter.html.erb (0.6ms)
+  Rendered static_pages/_playlist_filter.html.erb (0.5ms)
+  Rendered static_pages/search.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 962ms (Views: 959.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-0654388d3762a5ae7a3475121d41fec64b7e56785e0d11d115cb67ddfeddeb0d.css?body=1" for 127.0.0.1 at 2016-01-06 14:01:23 +0100
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:23 +0100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:23 +0100
+
+
+Started GET "/assets/authentication.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/playlists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/search.self-8abb4310eb416823dd13b3f5bd235a4ee329618871cdffcb9a6579368baec451.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/songs.self-a0a644a2490ddfe5310d72dd08536e5d82b40a70199f9ad4541c5878ce065e56.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/tracks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/users.self-be05dad6dc07dc6f95c2c0412b78ace14beb4d8faeb93811de080918954da3ad.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/soundcloudapi.self-2988089d499081afb316ad4133bbfe3b640b47b77dd37a3b627255881913ff7d.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/search.self-8abb4310eb416823dd13b3f5bd235a4ee329618871cdffcb9a6579368baec451.js?body=1" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/logo-moosic-63057f73f8948ffc4c2fe378a66babab38cba065891c44c32501d25c39a2a2fb.png" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-06 14:01:24 +0100
+
+
+Started GET "/assets/sc-placeholder.png" for 127.0.0.1 at 2016-01-06 14:01:27 +0100
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2016-01-06 14:01:27 +0100
+
+
+Started GET "/add_to_playlist?title=NCS%3A+The+Best+of+2015+%5BAlbum+Mix%5D&source=NoCopyrightSounds&thumbnail_url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fe3kG0x9f_kQ%2Fmqdefault.jpg&song_url=e3kG0x9f_kQ&host=youtube&playlist_id=1" for 127.0.0.1 at 2016-01-06 14:01:31 +0100
+Processing by StaticPagesController#add_to_playlist as */*
+  Parameters: {"title"=>"NCS: The Best of 2015 [Album Mix]", "source"=>"NoCopyrightSounds", "thumbnail_url"=>"https://i.ytimg.com/vi/e3kG0x9f_kQ/mqdefault.jpg", "song_url"=>"e3kG0x9f_kQ", "host"=>"youtube", "playlist_id"=>"1"}
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 318ms (ActiveRecord: 304.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-01-06 14:01:31 +0100
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  Rendered playlists/index.html.erb (8.7ms)
+  Rendered users/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 216ms (Views: 197.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-01-06 14:01:35 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/index.html.erb (5.4ms)
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 92ms (Views: 78.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-06 14:01:37 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 106ms (Views: 102.8ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/tracks/64" for 127.0.0.1 at 2016-01-06 14:01:41 +0100
+Processing by TracksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zKMh3UkFABb0+x/XQmc5q4S5jR+JRBoQA/Qc3Rd9SmtQYzgb2DtwWsicMCMK6XopEXBgO5RRKiSjr6OHRbtccQ==", "id"=>"64"}
+Redirected to http://localhost:3000/playlists/1
+Completed 302 Found in 198ms (ActiveRecord: 194.7ms)
+
+
+Started GET "/playlists/1" for 127.0.0.1 at 2016-01-06 14:01:41 +0100
+Processing by PlaylistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 91ms (Views: 89.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-01-06 14:01:44 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered playlists/index.html.erb (3.4ms)
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 84ms (Views: 68.9ms | ActiveRecord: 2.3ms)
