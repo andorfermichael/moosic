@@ -66,6 +66,9 @@ gem 'gon', '~> 6.0', '>= 6.0.1'
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6', require: 'sprockets/es6'
 
+# Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
