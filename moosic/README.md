@@ -12,10 +12,10 @@ or SoundCloud. Moosic handles everything for you!
 # Setup
 
 ```ruby
-bundle install  
+bundle install
 rake db:migrate
 ```
-Go to config/initializers, rename omniauth-sample.rb to omniauth.rb, uncomment all lines and add your ids and secrets.
+Go to directory config, rename application-sample.yml to application.yml and add your secrets.
 
 # Usage
 
