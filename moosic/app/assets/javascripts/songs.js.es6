@@ -103,6 +103,12 @@ function hideAllPlayers() {
   youtubeWidgetElement.style.display = 'none';
 }
 
+// Stops all available players from playing songs
+function stopAllPlayers() {
+  soundcloudWidgetObject.pause();
+  youtubeWidgetObject.pauseVideo();
+}
+
 // Decides which song from which host will be played
 function playSong() {
   if (gon.single_track === 'true') {
@@ -136,6 +142,7 @@ function playSong() {
 
 // Handles the play of a song hosted by SoundCloud
 function playSoundCloudSong() {
+  stopAllPlayers();
   hideAllPlayers();
   soundcloudWidgetElement.style.display = 'block';
 
@@ -180,6 +187,7 @@ function playSoundCloudSong() {
 
 // Handles the play of a song hosted by YouTube
 function playYouTubeSong() {
+  stopAllPlayers();
   hideAllPlayers();
   youtubeWidgetElement.style.display = 'block';
 
@@ -303,8 +311,10 @@ $(document).ready(function () {
      * Add behaviour for soundcloud api ready state
      * - Play song
      */
-    soundcloudWidgetObject.bind(SC.Widget.Events.PAUSE, function () {
+    soundcloudWidgetObject.bind(SC.Widget.Events.READY, function () {
       if (getHost() == 'soundcloud') {
+        // Soundcloud player needs 25 milliseconds more to be ready for actions
+        setTimeout(25);
         playSong();
       }
     });
