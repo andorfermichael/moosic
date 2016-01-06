@@ -1,10 +1,9 @@
 <h1>Your Playlists</h1>
-<p><%= link_to "Create new Playlist", new_playlist_path %></p>
 
 <div class="visible-xs-block">
-  <% @playlists.each_slice(1) do |playlist_slice| %>
+  <% @playlists.each_slice(1).with_index do |playlist_slice, i| %>
       <div class="row col-xs-12">
-        <% playlist_slice.each do |playlist| %>
+        <% playlist_slice.each_with_index do |playlist, j| %>
             <div class="col-xs-12">
               <%= link_to(playlist) do %>
                   <div class="tile">
@@ -15,15 +14,25 @@
                   </div>
               <% end %>
             </div>
+            <% if ( i == @playlists.length / 1 && playlist == playlist_slice.last) %>
+                <div class="col-xs-12">
+                  <%= link_to(new_playlist_path) do %>
+                      <div class="tile">
+                        <%= image_tag 'add.png', alt: 'playlist add', class: 'center-block' %>
+                        <h4>Add a new playlist</h4>
+                      </div>
+                  <% end %>
+                </div>
+            <% end %>
         <% end %>
       </div>
   <% end %>
 </div>
 
 <div class="visible-sm-block">
-  <% @playlists.each_slice(2) do |playlist_slice| %>
+  <% @playlists.each_slice(2).with_index do |playlist_slice, i| %>
       <div class="row col-sm-12">
-        <% playlist_slice.each do |playlist| %>
+        <% playlist_slice.each_with_index do |playlist, j| %>
             <div class="col-sm-6">
               <%= link_to(playlist) do %>
                   <div class="tile">
@@ -34,15 +43,25 @@
                   </div>
               <% end %>
             </div>
+            <% if ( i == @playlists.length / 2 && playlist == playlist_slice.last) %>
+                <div class="col-sm-6">
+                  <%= link_to(new_playlist_path) do %>
+                      <div class="tile">
+                        <%= image_tag 'add.png', alt: 'playlist add', class: 'center-block' %>
+                        <h4>Add a new playlist</h4>
+                      </div>
+                  <% end %>
+                </div>
+            <% end %>
         <% end %>
       </div>
   <% end %>
 </div>
 
 <div class="visible-md-block">
-  <% @playlists.each_slice(2) do |playlist_slice| %>
+  <% @playlists.each_slice(2).with_index do |playlist_slice, i| %>
       <div class="row col-md-12">
-        <% playlist_slice.each do |playlist| %>
+        <% playlist_slice.each_with_index do |playlist, j| %>
             <div class="col-md-6">
               <%= link_to(playlist) do %>
                   <div class="tile">
@@ -53,25 +72,45 @@
                   </div>
               <% end %>
             </div>
+            <% if ( i == @playlists.length / 2 && playlist == playlist_slice.last) %>
+                <div class="col-md-6">
+                  <%= link_to(new_playlist_path) do %>
+                      <div class="tile">
+                        <%= image_tag 'add.png', alt: 'playlist add', class: 'center-block' %>
+                        <h4>Add a new playlist</h4>
+                      </div>
+                  <% end %>
+                </div>
+            <% end %>
         <% end %>
       </div>
   <% end %>
 </div>
 
 <div class="visible-lg-block">
-  <% @playlists.each_slice(3) do |playlist_slice| %>
+  <% @playlists.each_slice(3).with_index do |playlist_slice, i| %>
       <div class="row col-lg-12">
-        <% playlist_slice.each do |playlist| %>
+        <% playlist_slice.each_with_index do |playlist, j| %>
             <div class="col-lg-4">
-              <%= link_to(playlist) do %>
-                  <div class="tile">
-                    <%= image_tag playlist.image_url, alt: playlist.name, class: 'center-block' %>
-                    <h4><%= playlist.name %></h4>
-                    <p class="create-date">created on <%= l playlist.created_at, format: :european_format %></p>
-                    <p class="count-songs"><%= playlist.tracks.count %> songs</p>
-                  </div>
-              <% end %>
+                <%= link_to(playlist) do %>
+                    <div class="tile">
+                      <%= image_tag playlist.image_url, alt: playlist.name, class: 'center-block' %>
+                      <h4><%= playlist.name %></h4>
+                      <p class="create-date">created on <%= l playlist.created_at, format: :european_format %></p>
+                      <p class="count-songs"><%= playlist.tracks.count %> songs</p>
+                    </div>
+                <% end %>
             </div>
+            <% if ( i == @playlists.length / 3 && playlist == playlist_slice.last) %>
+                <div class="col-lg-4">
+                  <%= link_to(new_playlist_path) do %>
+                      <div class="tile">
+                        <%= image_tag 'add.png', alt: 'playlist add', class: 'center-block' %>
+                        <h4>Add a new playlist</h4>
+                      </div>
+                  <% end %>
+                </div>
+            <% end %>
         <% end %>
       </div>
   <% end %>
