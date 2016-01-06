@@ -1,0 +1,32 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+FACEBOOK_KEY: YOUR_FACEBOOK_KEY
+FACEBOOK_SECRET: YOUR_FACEBOOK_SECRET
+
+TWITTER_KEY: YOUR_TWITTER_KEY
+TWITTER_SECRET: YOUR_TWITTER_SECRET
+
+GOOGLE_CLIENT_ID: YOUR_GOOGLE_CLIENT_ID
+GOOGLE_SECRET: YOUR_GOOGLE_SECRET
+
+SOUNDCLOUD_CLIENT_ID: YOUR_SOUNDCLOUD_CLIENT_ID
+SOUNDCLOUD_SECRET: YOUR_SOUNDCLOUD_SECRET
+
+development:
+  SECRET_KEY_BASE: YOUR_DEVELOPMENT_SECRET_KEY_BASE
+
+test:
+  SECRET_KEY_BASE: YOUR_TEST_SECRET_KEY_BASE
+
+production:
+  SECRET_KEY_BASE: YOUR_PRODUCTION_SECRET_KEY_BASE
