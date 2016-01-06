@@ -1,0 +1,26 @@
+<div class="container-fluid show">
+  <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="user-profile-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div id="flash_messages" class="user-profile"><%= flash_messages %></div>
+      <div class="user-info-left col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <% if @user.image_url == nil %>
+            <%= image_tag gravatar_image_url(@user.email), alt: @user.name, class: 'img-circle-big center-block', width: 250, height: 250 %>
+        <% else %>
+            <%= image_tag @user.image_url, alt: @user.name, class: 'img-circle-big center-block', width: 250, height: 250 %>
+        <% end %>
+        <h3><%= @user.name.downcase %></h3>
+        <div class="separation-line"></div>
+        <p>member since: <%= @user.created_at.year %></p>
+        <p>playlists: <%= @user.count_playlists %></p>
+      </div>
+      <div class="playlists-list col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-12 col-sm-7 col-md-7 col-lg-7">
+        <% if @user.count_playlists == 0 %>
+          <h4>no playlists available</h4>
+            <%= image_tag 'add.png', alt: 'playlist add', width: 300, height: 150, class: 'center-block' %>
+        <% else %>
+          <%= render :file => 'playlists/index', :collection => @playlists %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

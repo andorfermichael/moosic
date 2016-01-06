@@ -1,0 +1,19 @@
+en:
+  flash_messages:
+    defaults:
+        info: "You are already logged in!"
+        error: "Access dendied! Login for access!"
+    sessions:
+      create_conventional:
+        success: "Login successfully!"
+        error: "Email and Password invalid! Try again!"
+      create_social:
+        success: "Authentication successfully"
+        error: "Authentication failed!"
+      destroy:
+        info: "You have been logged out!"
+    users:
+      create:
+        success: "Sign up successfully. You can login now!"
+      update:
+        success: "Settings successfully saved."

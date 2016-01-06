@@ -1,0 +1,17 @@
+<% if playlists_filtered.present? %>
+
+  <ul>
+    <% playlists_filtered.each do |playlist| %>
+      <li>
+        <%= link_to playlist_path(playlist["id"]) do %>
+          <%= image_tag "pl-placeholder.png", alt: playlist["name"], class: "tn" %>
+        <% end %>
+        <span class="first"><%= link_to playlist["name"], playlist_path(playlist["id"]) %></span>
+      </li>
+    <% end %>
+  </ul>
+
+
+<% else %>
+<p>No Playlists found...</p>
+<% end %>

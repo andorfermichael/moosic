@@ -1,0 +1,32 @@
+<%= form_for(@user, auto_html5_validation: true) do |f| %>
+    <div class="input-container">
+      <% if @user.errors.any? %>
+          <div id="error_explanation">
+            <div class="alert alert-danger">
+              The form contains <%= pluralize(@user.errors.count, 'error') %>:
+              <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.text_field :name, :placeholder => 'username', class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= f.email_field :email, :placeholder => 'email', class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= f.password_field :password, :placeholder => 'password', class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= f.password_field :password_confirmation, :placeholder => 'confirm password', class: 'form-control' %>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Sign up' %>
+      </div>
+    </div>
+<% end %>

@@ -1,0 +1,79 @@
+// Place all the styles related to the songs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-fluid.player {
+  height: 100%;
+  width: 100%;
+  background: url(background-blurred.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: table;
+  position: absolute;
+
+  .row.center-vertical {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .row.players {
+    display: block;
+
+    iframe {
+      margin: auto;
+    }
+  }
+
+  .row.controls {
+    display: block;
+    height: 50px;
+    margin-top: 40px;
+
+    @media (max-width: 767px) {
+      height: 30px;
+    }
+
+    @media (max-width: 700px) {
+      margin-top: 20px;
+    }
+
+    .controls-container {
+      height: 100%;
+      margin: auto;
+    }
+
+    .prev-song {
+      height: 100%;
+      background: url('prev_circle_arrow.png') no-repeat;
+      background-size: contain;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .play-song {
+      height: 100%;
+      margin-left: 15px;
+      background: url('play_circle_arrow.png') no-repeat;
+      background-size: contain;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .pause-song {
+      height: 100%;
+      margin-left: 15px;
+      background: url('pause_circle_arrow.png') no-repeat;
+      background-size: contain;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .next-song {
+      height: 100%;
+      margin-left: 15px;
+      background: url('next_circle_arrow.png') no-repeat;
+      background-size: contain;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+}
