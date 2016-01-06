@@ -3,16 +3,15 @@ class StaticPagesController < ApplicationController
 
   def search
     if params[:search]
-      @users_filtered = User.search(params[:search]).order('created_at DESC')
+      session[:users_filtered] = User.search(params[:search]).order('created_at DESC')
       @playlists_filtered = Playlist.search(params[:search]).order('created_at DESC')
     else
-      @users_filtered = User.all.order('created_at DESC')
+      ession[:users_filtered] = User.all.order('created_at DESC')
       @playlists_filtered = Playlist.all.order('created_at DESC')
     end
   end
 
   def user_filter
-    @query = 'b'
     respond_to do |format|
       format.js { render 'user_filter.js.erb' }
     end

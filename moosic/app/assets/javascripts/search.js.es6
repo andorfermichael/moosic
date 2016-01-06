@@ -10,8 +10,6 @@ window.onload = function () {
     $('#Sc').removeClass('active');
     $('.Sc').addClass('hidden');
     $('.Yt').removeClass('hidden');
-
-    searchByKeyword();
   });
 
   $('#Sc').click(function () {
@@ -22,7 +20,6 @@ window.onload = function () {
     $('#Yt').removeClass('active');
     $('.Yt').addClass('hidden');
     $('.Sc').removeClass('hidden');
-
   });
 
   $('#users').click(function () {
@@ -210,6 +207,7 @@ function onClientLoad() {
 
 function onYoutubeApiLoad() {
   gapi.client.setApiKey('AIzaSyCUnKMWe0bzmqB5jMasNVLfY4cYupf_auY');
+  searchByKeyword();
 }
 
 // Soundcloud Api Setup function
