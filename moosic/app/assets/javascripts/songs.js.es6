@@ -243,11 +243,13 @@ function onWindowResizeEnd() {
     $('#yt-widget').height(260);
     $('#sc-widget').width(500);
     $('#sc-widget').height(260);
+    $('.user-profile-header').hide();
   } else {
     $('#yt-widget').width(640);
     $('#yt-widget').height(390);
     $('#sc-widget').width(640);
     $('#sc-widget').height(390);
+    $('.user-profile-header').show();
   }
 }
 
