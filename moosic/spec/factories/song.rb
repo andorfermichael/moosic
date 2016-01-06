@@ -5,6 +5,6 @@ FactoryGirl.define do
     thumbnail_url "https://i.ytimg.com/vi/ktvTqknDobU/mqdefault.jpg"
     song_url "ktvTqknDobU"
     host "youtube"
-    year DateTime.new(2015, 9, 1,)
+    year DateTime.new(2015, 9, 1)
   end
 end
