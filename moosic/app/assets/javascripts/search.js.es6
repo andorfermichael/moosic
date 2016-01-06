@@ -53,8 +53,11 @@ window.onload = function () {
   $('.pl').click(function (e) {
     const elems = tempObj.childNodes;
 
-    if (tempObj.className == 'Yt') var host = 'youtube';
-    else var host = 'soundcloud';
+    if (tempObj.className == 'Yt') {
+      var host = 'youtube';
+    } else {
+      var host = 'soundcloud';
+    }
 
     $.ajax({
       url: 'add_to_playlist',
