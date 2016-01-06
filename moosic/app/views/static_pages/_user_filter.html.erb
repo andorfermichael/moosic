@@ -1,18 +1,22 @@
-
-
 <% if users_filtered.present? %>
+
   <ul>
     <% users_filtered.each do |user| %>
-        <% user.each_pair do |key, value| %>
-            <p><%= key %>: <%= value %></p><br>
+      <li>
+        <%= link_to user_path(user["id"]) do %>
+          <% if user["image_url"] == nil %>
+              <%= image_tag gravatar_image_url(user["email"]), alt: user["name"], class: 'tn' %>
+          <% else %>
+              <%= image_tag user["image_url"], alt: user["name"], class: 'tn' %>
+          <% end %>
         <% end %>
+        <span class="first">
+          <%= link_to user["name"], user_path(user["id"]) %>
+        </span>
+        <span><%= user["email"] %></span>
+      </li>
     <% end %>
   </ul>
 <% else %>
-
+<p>No Users found...</p>
 <% end %>
-
-  <% for item in users_filtered %>
-    <%= item[:name] %>
-  <% end %>
-  

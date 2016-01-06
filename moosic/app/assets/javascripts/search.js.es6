@@ -3,23 +3,7 @@ window.onload = function () {
   initializeSoundcloud();
 
   $('#tracks').click(function () {
-    $('#tracks').addClass('active');
-    $('#users').removeClass('active');
-    $('#playlists').removeClass('active');
-
     searchByKeyword();
-  });
-
-  $('#users').click(function () {
-    $('#users').addClass('active');
-    $('#playlists').removeClass('active');
-    $('#tracks').removeClass('active');
-  });
-
-  $('#playlists').click(function () {
-    $('#playlists').addClass('active');
-    $('#users').removeClass('active');
-    $('#tracks').removeClass('active');
   });
 
   $('.cancel').click(function () {
