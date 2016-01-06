@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         playlist.count_songs = Playlist.find(playlist.id).songs.size
         true
       else
-        playlist.image_url = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150'
+        playlist.image_url = 'pl-placeholder.png'
         playlist.count_songs = 0
       end
     end
