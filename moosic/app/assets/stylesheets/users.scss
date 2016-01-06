@@ -97,6 +97,7 @@ html, body {
 
   @media (max-device-width: 767px) {
     padding-bottom: 20px;
+    height: 132px;
   }
 
   h1 {
@@ -190,7 +191,7 @@ html, body {
     position: absolute;
     height: 60px;
     width: 250px;
-    top: 62px;
+    top: 60px;
     right: 0;
     background-color: $base-white;
     border: 2px solid $base-cyan;
@@ -247,17 +248,11 @@ html, body {
   text-align: center;
   z-index: $index-user-container;
 
-  @media (max-device-width: 767px) {
-    top: 140px;
-  }
+
 
   .user-info-left {
     min-heigth: 100vh;
     height: auto;
-
-    @media (max-device-width: 767px) {
-      margin-bottom: 40px;
-    }
 
     .img-circle-big {
       border-radius: 50%;
