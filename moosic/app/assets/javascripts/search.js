@@ -58,22 +58,24 @@ window.onload = function() {
 		else host = "soundcloud";
 
 		$.ajax({
-        url:'add_to_playlist',
-        type:'GET',
-        data: { "title": elems[2].innerText,
-        				"source": elems[3].innerText,
-        				"thumbnail_url": "https://i.ytimg.com/vi/" + tempObj.dataset.video_id + "/mqdefault.jpg",
-        				"song_url": tempObj.dataset.video_id,
-        				"host": host,
-        				"playlist_id": e.target.dataset.playlist_id
-        },
-        success:function(data){
-        },
-        error:function(data){
-            console.log(data);
-        }
-    });
-    $('.playlist-popup').addClass('hidden');
+			url:'add_to_playlist',
+			type:'GET',
+			data: { "title": elems[2].innerText,
+							"source": elems[3].innerText,
+							"thumbnail_url": "https://i.ytimg.com/vi/" + tempObj.dataset.video_id + "/mqdefault.jpg",
+							"song_url": tempObj.dataset.video_id,
+							"host": host,
+							"playlist_id": e.target.dataset.playlist_id
+			},
+			success:function(data){
+				alert("Successfully added to Playlist")
+			},
+			error:function(data){
+				alert("Failed to add song to Playlist.\nFor more info open the console.")
+				console.log(data);
+			}
+		});
+		$('.playlist-popup').addClass('hidden');
 	});
 }
 
