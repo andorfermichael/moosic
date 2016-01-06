@@ -78,6 +78,7 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+    @user.count_playlists = User.find(params[:id]).playlists.size
   end
 
   # Called when cancel button is pressed
