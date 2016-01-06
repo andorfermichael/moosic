@@ -17,4 +17,4 @@ log/*
 tmp/
 
 # Ignore files which contain secret tokens
-omniauth.rb
+application.yml
