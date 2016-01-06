@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # Search partial routes
   get 'filter_user', to: 'static_pages#user_filter'
-  get 'search/filter_playlist', to: 'static_pages#playlist_filter', as: 'filter_playlist'
+  get 'filter_playlist', to: 'static_pages#playlist_filter'
 
   # Add Song to Playlist route
   get 'add_to_playlist', to: 'static_pages#add_to_playlist'

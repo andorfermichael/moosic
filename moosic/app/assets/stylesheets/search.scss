@@ -29,6 +29,10 @@ li {
 }
 
 .filter-menu {
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 
   li {
     cursor: pointer;
@@ -36,10 +40,6 @@ li {
 
   .active {
     color: $base-cyan;
-  }
-
-  #Yt, #Sc {
-    margin-left: 20px;
   }
 }
 

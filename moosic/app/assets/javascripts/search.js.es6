@@ -2,40 +2,24 @@ window.onload = function () {
 
   initializeSoundcloud();
 
-  $('#Yt').click(function () {
-    $('#playlists').removeClass('active');
-    $('#users').removeClass('active');
+  $('#tracks').click(function () {
     $('#tracks').addClass('active');
-    $('#Yt').addClass('active');
-    $('#Sc').removeClass('active');
-    $('.Sc').addClass('hidden');
-    $('.Yt').removeClass('hidden');
-  });
+    $('#users').removeClass('active');
+    $('#playlists').removeClass('active');
 
-  $('#Sc').click(function () {
-    $('#playlists').removeClass('active');
-    $('#users').removeClass('active');
-    $('#tracks').addClass('active');
-    $('#Sc').addClass('active');
-    $('#Yt').removeClass('active');
-    $('.Yt').addClass('hidden');
-    $('.Sc').removeClass('hidden');
+    searchByKeyword();
   });
 
   $('#users').click(function () {
+    $('#users').addClass('active');
     $('#playlists').removeClass('active');
     $('#tracks').removeClass('active');
-    $('#Yt').removeClass('active');
-    $('#Sc').removeClass('active');
-    $('#users').addClass('active');
   });
 
   $('#playlists').click(function () {
+    $('#playlists').addClass('active');
     $('#users').removeClass('active');
     $('#tracks').removeClass('active');
-    $('#Yt').removeClass('active');
-    $('#Sc').removeClass('active');
-    $('#playlists').addClass('active');
   });
 
   $('.cancel').click(function () {
@@ -80,7 +64,7 @@ window.onload = function () {
 }
 
 let tempObj;
-const resultAmount = 10;
+const resultAmount = 5;
 
 function searchByKeyword() {
   document.getElementById('result-container').innerHTML = '';
@@ -122,7 +106,6 @@ function generateYoutubeList(response) {
       item.snippet.channelTitle,
       'Yt'
     );
-
     parent.appendChild(listItem);
   }
 }
@@ -143,8 +126,6 @@ function generateSoundcloudList(response) {
 
     parent.appendChild(listItem);
   }
-
-  $('.Sc').addClass('hidden');
 }
 
 function generateListItem(id, thumbnail, title, channel, host) {

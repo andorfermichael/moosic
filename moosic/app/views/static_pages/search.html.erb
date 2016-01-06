@@ -5,11 +5,15 @@
   <div class="row col-xs-12">
     <div class="filter-menu col-md-4 col-lg-3">
       <ul class="list-unstyled">
-        <li id="tracks" class="active">Tracks</li>
-          <li id="Yt" class="active">Youtube</li>
-          <li id="Sc">Soundcloud</li>
-        <li id="playlists"><%= link_to "Playlists", filter_playlist_path, :remote => true %></li>
-        <li id="users"><%= link_to "Users", filter_user_path, :query => params[:search], :remote => true %></li>
+        <li id="tracks" class="active">
+          Tracks
+        </li>
+        <li id="playlists">
+          <%= link_to "Playlists", filter_playlist_path, :remote => true %>
+        </li>
+        <li id="users">
+          <%= link_to "Users", filter_user_path, :query => params[:search], :remote => true %>
+        </li>
       </ul>
     </div>
     <div class="playlist-popup hidden">

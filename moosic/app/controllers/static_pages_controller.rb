@@ -4,10 +4,10 @@ class StaticPagesController < ApplicationController
   def search
     if params[:search]
       session[:users_filtered] = User.search(params[:search]).order('created_at DESC')
-      @playlists_filtered = Playlist.search(params[:search]).order('created_at DESC')
+      session[:playlits_filtered] = Playlist.search(params[:search]).order('created_at DESC')
     else
-      ession[:users_filtered] = User.all.order('created_at DESC')
-      @playlists_filtered = Playlist.all.order('created_at DESC')
+      session[:users_filtered] = User.all.order('created_at DESC')
+      session[:playlits_filtered] = Playlist.all.order('created_at DESC')
     end
   end
 
