@@ -20,8 +20,10 @@ window.onload = function () {
 
     if (tempObj.className == 'Yt')  {
       var host = 'youtube';
+      var thumbnail_url = 'https://i.ytimg.com/vi/' + tempObj.dataset.video_id + '/mqdefault.jpg'
     } else { 
       var host = 'soundcloud';
+      var thumbnail_url = elems[0].src;
     }
 
     $.ajax({
@@ -30,7 +32,7 @@ window.onload = function () {
       data: {
         "title": elems[2].innerText,
         "source": elems[3].innerText,
-        "thumbnail_url": 'https://i.ytimg.com/vi/' + tempObj.dataset.video_id + '/mqdefault.jpg',
+        "thumbnail_url": thumbnail_url,
         "song_url": tempObj.dataset.video_id,
         "host": host,
         "playlist_id": e.target.dataset.playlist_id
@@ -131,9 +133,9 @@ function generateListItem(id, thumbnail, title, channel, host) {
   if (thumbnail != null) {
     tnSrc.value = thumbnail;
   } else if (host == 'Yt') {
-    tnSrc.value = '/assets/yt-placeholder.png';
+    tnSrc.value = '<%= asset_path "yt-placeholder.png" %>';
   } else if (host == "Sc") {
-    tnSrc.value = '/assets/sc-placeholder.png';
+    tnSrc.value = '<%= asset_path "sc-placeholder.png" %>';
   }
 
   tn.setAttributeNode(tnSrc);
@@ -144,7 +146,7 @@ function generateListItem(id, thumbnail, title, channel, host) {
   const addClass = document.createAttribute('class');
   addClass.value = 'add-button';
   const addSrc = document.createAttribute('src');
-  addSrc.value = '/assets/add.png';
+  addSrc.value = '<%= asset_path "add.png" %>';
   add.setAttributeNode(addSrc);
   add.setAttributeNode(addClass);
 
