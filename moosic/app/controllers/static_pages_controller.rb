@@ -13,13 +13,13 @@ class StaticPagesController < ApplicationController
 
   def user_filter
     respond_to do |format|
-      format.js { render 'user_filter.js.erb' }
+      format.js { render 'static_pages/user_filter.js.erb' }
     end
   end
 
   def playlist_filter
     respond_to do |format|
-      format.js { render 'playlist_filter.js.erb' }
+      format.js { render 'static_pages/playlist_filter.js.erb' }
     end
   end
 
