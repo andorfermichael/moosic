@@ -20,8 +20,10 @@ window.onload = function () {
 
     if (tempObj.className == 'Yt')  {
       var host = 'youtube';
+      var thumbnail_url = 'https://i.ytimg.com/vi/' + tempObj.dataset.video_id + '/mqdefault.jpg'
     } else { 
       var host = 'soundcloud';
+      var thumbnail_url = elems[0].src;
     }
 
     $.ajax({
@@ -30,7 +32,7 @@ window.onload = function () {
       data: {
         "title": elems[2].innerText,
         "source": elems[3].innerText,
-        "thumbnail_url": 'https://i.ytimg.com/vi/' + tempObj.dataset.video_id + '/mqdefault.jpg',
+        "thumbnail_url": thumbnail_url,
         "song_url": tempObj.dataset.video_id,
         "host": host,
         "playlist_id": e.target.dataset.playlist_id
