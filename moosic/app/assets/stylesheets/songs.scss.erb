@@ -5,7 +5,7 @@
 .container-fluid.player {
   height: 100%;
   width: 100%;
-  background: url(<%= asset_path "background-blurred.jpg" %>) no-repeat center center fixed;
+  background: url(<%= asset_path 'background-blurred.jpg' %>) no-repeat center center fixed;
   background-size: cover;
   display: table;
   position: absolute;
@@ -43,7 +43,7 @@
 
     .prev-song {
       height: 100%;
-      background: url('prev_circle_arrow.png') no-repeat;
+      background: url(<%= asset_path 'prev_circle_arrow.png' %>) no-repeat;
       background-size: contain;
       display: inline-block;
       cursor: pointer;
@@ -52,7 +52,7 @@
     .play-song {
       height: 100%;
       margin-left: 15px;
-      background: url('play_circle_arrow.png') no-repeat;
+      background: url(<%= asset_path 'play_circle_arrow.png' %>) no-repeat;
       background-size: contain;
       display: inline-block;
       cursor: pointer;
@@ -61,7 +61,7 @@
     .pause-song {
       height: 100%;
       margin-left: 15px;
-      background: url('pause_circle_arrow.png') no-repeat;
+      background: url(<%= asset_path 'pause_circle_arrow.png' %>) no-repeat;
       background-size: contain;
       display: inline-block;
       cursor: pointer;
@@ -70,7 +70,7 @@
     .next-song {
       height: 100%;
       margin-left: 15px;
-      background: url('next_circle_arrow.png') no-repeat;
+      background: url(<%= asset_path 'next_circle_arrow.png' %>) no-repeat;
       background-size: contain;
       display: inline-block;
       cursor: pointer;
