@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :check_login_state, :set_user, only: [:show, :edit]
-  before_filter :catch_cancel, :update => [:create, :update, :destroy]
+  before_action :catch_cancel, update: [:create, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     # as an additional information
     @playlists.each do |playlist|
       track = Track.where('playlist_id = ? AND position = ?', playlist.id, 1).first
-      if track != nil
+      if !track.nil?
         song = Song.find(track.song_id)
         playlist.image_url = song.thumbnail_url
         playlist.count_songs = Playlist.find(playlist.id).songs.size
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to(root_path, :flash => :success)
+      redirect_to(root_path, flash: :success)
     else
       render 'new'
     end
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(session[:user_id])
     if @user.update_attributes(user_params)
-      redirect_to(@user, :flash => :success)
+      redirect_to(@user, flash: :success)
     else
       render 'edit'
     end
@@ -71,6 +71,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
