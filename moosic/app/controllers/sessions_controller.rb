@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   # User logs in with email and password
   def create_conventional
     # Find user with given email and password
@@ -11,9 +10,9 @@ class SessionsController < ApplicationController
       # This is how we keep the user # logged in
       # when they navigate around our website.
       session[:user_id] = user.id
-      redirect_to(user_path(session[:user_id]), :flash => :success)
+      redirect_to(user_path(session[:user_id]), flash: :success)
     else
-      redirect_to(root_path, :flash => :error)
+      redirect_to(root_path, flash: :error)
     end
   end
 
@@ -27,15 +26,13 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to(user_path(session[:user_id]))
     else
-      redirect_to(root_path, :flash => :error)
+      redirect_to(root_path, flash: :error)
     end
   end
 
   # Logout = destroy session
   def destroy
-    if current_user
-      session[:user_id] = nil
-    end
-    redirect_to(root_path, :flash => :info)
+    session[:user_id] = nil if current_user
+    redirect_to(root_path, flash: :info)
   end
 end
