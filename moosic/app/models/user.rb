@@ -3,14 +3,14 @@ class User < ActiveRecord::Base
   has_many :playlists
   has_many :authentications
 
-  validates_confirmation_of :password
+  validates :password, confirmation: true
   validates :email, uniqueness: true
-  validates :email, :email_format => { :message => 'has no valid format' }
+  validates :email, email_format: { message: 'has no valid format' }
   validates :name, :email, :password, :password_confirmation, presence: true
-  validates :password, :format => {:with => /\A(?=.*[a-z]).+\z/, message: 'must contain at least 1 lowercase character'}
-  validates :password, :format => {:with => /\A(?=.*[A-Z]).+\z/, message: 'must contain at least 1 uppercase character'}
-  validates :password, :format => {:with => /\A(?=.*[\W]).+\z/, message: 'must contain at least 1 special character'}
-  validates :password, :format => {:with => /\A(?=.*\d).+\z/, message: 'must contain at least 1 digit'}
+  validates :password, format: { with: /\A(?=.*[a-z]).+\z/, message: 'must contain at least 1 lowercase character' }
+  validates :password, format: { with: /\A(?=.*[A-Z]).+\z/, message: 'must contain at least 1 uppercase character' }
+  validates :password, format: { with: /\A(?=.*[\W]).+\z/, message: 'must contain at least 1 special character' }
+  validates :password, format: { with: /\A(?=.*\d).+\z/, message: 'must contain at least 1 digit' }
   validates :name, length: { in: 4..30 }
   validates :password, length: { in: 9..20 }
 
@@ -22,13 +22,13 @@ class User < ActiveRecord::Base
     # Look for an existing authorization
     # provider + uid uniquely identify a user
     a = Authentication.find_or_create_by(
-        provider: auth['provider'],
-        uid:      auth['uid']
+      provider: auth['provider'],
+      uid:      auth['uid']
     )
 
     # Update secret and token which expire from time to time
-    a.update( secret: auth['credentials']['secret'],
-              token:  auth['credentials']['token']  )
+    a.update(secret: auth['credentials']['secret'],
+             token:  auth['credentials']['token'])
     a.save!
 
     # Create user if it doesn't exist
@@ -39,18 +39,16 @@ class User < ActiveRecord::Base
       user.email = auth['info']['email']
       user.location = auth['info']['location']
       user.image_url = auth['info']['image']
-      user.save(:validate => false)
+      user.save(validate: false)
 
       # Store user
       a.user = user
       a.save!
     end
-    return a.user
+    a.user
   end # def self.find_or_create_with_omniauth(auth)
 
-
   def self.search(query)
-    where("name LIKE ?", "%#{query}%" )
+    where('name LIKE ?', "%#{query}%")
   end
-
 end

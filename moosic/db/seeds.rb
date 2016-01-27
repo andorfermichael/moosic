@@ -14,9 +14,9 @@ User.create([
 
 
 Song.create([
-  {titel: "Radioactive", source: "ImagineDragonsVEVO", thumbnail_url: "https://i.ytimg.com/vi/ktvTqknDobU/mqdefault.jpg", song_url: "ktvTqknDobU", host: "youtube", year: DateTime.new(2015, 9, 1,)},
-  {titel: "Payback", source: "Dimitri Vangelis & Wyman", thumbnail_url: "", song_url: "147229671", host: "soundcloud", year: DateTime.new(2015, 12, 4)},
-  {titel: "WILD - Back To You", source: "MrSuicideSheep", thumbnail_url: "https://i.ytimg.com/vi/HtcWvsiQkZE/mqdefault.jpg", song_url: "HtcWvsiQkZE", host: "youtube", year: DateTime.new(2015, 12, 4)}
+  {titel: "Radioactive", source: "ImagineDragonsVEVO", thumbnail_url: "https://i.ytimg.com/vi/ktvTqknDobU/mqdefault.jpg", song_url: "ktvTqknDobU", host: "youtube", year: DateTime.new(2015, 9, 1,).in_time_zone},
+  {titel: "Payback", source: "Dimitri Vangelis & Wyman", thumbnail_url: "", song_url: "147229671", host: "soundcloud", year: DateTime.new(2015, 12, 4).in_time_zone},
+  {titel: "WILD - Back To You", source: "MrSuicideSheep", thumbnail_url: "https://i.ytimg.com/vi/HtcWvsiQkZE/mqdefault.jpg", song_url: "HtcWvsiQkZE", host: "youtube", year: DateTime.new(2015, 12, 4).in_time_zone}
 ])
 
 

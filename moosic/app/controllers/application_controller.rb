@@ -8,15 +8,11 @@ class ApplicationController < ActionController::Base
   # Indicates whether a user is logged in or not
   def current_user
     @current_user = nil
-    if session[:user_id]
-      @current_user ||= User.where(id: session[:user_id]).first
-    end
+    @current_user ||= User.where(id: session[:user_id]).first if session[:user_id]
   end
 
   def check_login_state
-    if !session[:user_id]
-      redirect_to(root_path, :flash => :error)
-    end
+    redirect_to(root_path, flash: :error) unless session[:user_id]
   end
 
   helper_method :current_user

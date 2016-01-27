@@ -6,7 +6,7 @@ class SongsController < ApplicationController
   # GET /songs.json
   def index
     # Single track
-    if params[:singletrack] === 'true'
+    if params[:singletrack] == 'true'
       # Create a new song with needed attributes from url parameters
       song = Song.new
       song.song_url = params[:songurl]
@@ -14,7 +14,6 @@ class SongsController < ApplicationController
 
       # Make song available in javascript
       gon.current_song = song
-      gon.single_track = params[:singletrack]
     else # Playlist
       # Get playlist according to url parameter
       @playlist = Playlist.find(params[:playlist])
@@ -93,13 +92,14 @@ class SongsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_song
-      @song = Song.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def song_params
-      params.require(:song).permit(:titel, :source, :thumbnail_url, :song_url, :host, :year)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_song
+    @song = Song.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def song_params
+    params.require(:song).permit(:titel, :source, :thumbnail_url, :song_url, :host, :year)
+  end
 end
