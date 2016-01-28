@@ -1,0 +1,21 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'lib/**/*'
+    - 'log/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'test/**/*'
+    - 'vendor/**/*'
+    - '**/Rakefile'
+    - '**/Gemfile'
+    - '**/Guardfile'
+
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 140 # or whatever ends up being appropriate

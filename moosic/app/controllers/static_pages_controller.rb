@@ -24,9 +24,15 @@ class StaticPagesController < ApplicationController
   end
 
   def add_to_playlist
-    s = Song.create(:titel => params[:title], :source => params[:source], :thumbnail_url => params[:thumbnail_url], :song_url => params[:song_url], :host => params[:host], :year => DateTime.now)
+    s = Song.create(titel: params[:title],
+                    source: params[:source],
+                    thumbnail_url: params[:thumbnail_url],
+                    song_url: params[:song_url],
+                    host: params[:host],
+                    year: DateTime.now.in_time_zone
+                   )
     pos = Track.where('playlist_id = ?', params[:playlist_id]).count + 1
-    Track.create(:position => pos, :playlist_id => params[:playlist_id], :song_id => s.id)
+    Track.create(position: pos, playlist_id: params[:playlist_id], song_id: s.id)
     redirect_to user_path(session[:user_id])
   end
 end

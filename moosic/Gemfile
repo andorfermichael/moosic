@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Set Ruby version
-ruby '2.2.1'
+#ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -53,7 +53,7 @@ gem 'bootstrap_flash_messages', '~> 1.0', '>= 1.0.2'
 # Fontawesome for rails
 gem 'font-awesome-rails', '~> 4.5'
 
-# Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website
+# Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website.
 gem 'autoprefixer-rails', '~> 6.1', '>= 6.1.2'
 
 # Enables Client Side Validations
@@ -125,4 +125,3 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
