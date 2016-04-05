@@ -16,7 +16,8 @@ class SongsController < ApplicationController
       gon.current_song = song
     else # Playlist
       # Get playlist according to url parameter
-      @playlist = Playlist.find(params[:playlist])
+      current_user = User.find(session[:user_id])
+      @playlist = current_user.playlists.find(params[:playlist])
 
       # Get all tracks of that playlist ascending ordered by their position
       tracks = Track.where('playlist_id = ?', params[:playlist]).order(position: :asc).all

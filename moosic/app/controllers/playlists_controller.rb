@@ -66,7 +66,8 @@ class PlaylistsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_playlist
-    @playlist = Playlist.find(params[:id])
+    current_user = User.find(session[:user_id])
+    @playlist = current_user.playlists.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
