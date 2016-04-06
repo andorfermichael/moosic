@@ -28,7 +28,7 @@ window.onload = function () {
 
     $.ajax({
       url: 'add_to_playlist',
-      type: 'GET',
+      type: 'POST',
       data: {
         "title": elems[2].innerText,
         "source": elems[3].innerText,

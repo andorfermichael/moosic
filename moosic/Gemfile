@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Set Ruby version
-#ruby '2.2.1'
+# ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -116,6 +116,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-commands-rspec'
+
+  # Automatic Ruby code style checking tool.
+  # Aims to enforce the community-driven Ruby Style Guide
+  gem 'rubocop', '~> 0.36.0'
+
+  # a code metric tool for rails codes, written in Ruby
+  gem 'rails_best_practices', '~> 1.15', '>= 1.15.7'
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

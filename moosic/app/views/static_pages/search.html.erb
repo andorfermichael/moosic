@@ -11,11 +11,11 @@
         </li>
         <li id="playlists">
           <%= image_tag "playlist.png", alt: "playlist", class: "menu-icon" %>
-          <%= link_to "Playlists", filter_playlist_path, :remote => true %>
+          <%= link_to "Playlists", filter_playlist_path, :remote => true, method: :post %>
         </li>
         <li id="users">
           <%= image_tag "user.png", alt: "user", class: "menu-icon" %>
-          <%= link_to "Users", filter_user_path, :remote => true %>
+          <%= link_to "Users", filter_user_path, :remote => true, method: :post %>
         </li>
       </ul>
     </div>
