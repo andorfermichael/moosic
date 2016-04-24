@@ -2,6 +2,8 @@ class PlaylistsController < ApplicationController
   before_action :check_login_state, only: [:show, :edit]
   before_action :set_playlist, only: [:show, :edit, :update, :destroy]
 
+  caches_page :index
+
   # GET /playlists
   # GET /playlists.json
   def index

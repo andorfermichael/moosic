@@ -126,6 +126,9 @@ group :development do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  # Static page caching for Action Pack (removed from core in Rails 4.0)
+  gem 'actionpack-page_caching'
 end
 
 group :production do
