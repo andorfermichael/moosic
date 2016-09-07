@@ -9,7 +9,7 @@ or SoundCloud. Moosic handles everything for you!
 [Salzburg University of Applied Sciences](http://www.fh-salzburg.ac.at/en/), 
 [MultiMediaTechnology Bachelor Degree](http://www.fh-salzburg.ac.at/en/disciplines/design-media-arts/bachelor-multimediatechnology/degree-programme/degree-programme/).
 
-# Setup
+## Setup
 
 ```ruby
 bundle install
@@ -17,23 +17,23 @@ rake db:migrate
 ```
 Go to directory config, rename application-sample.yml to application.yml and add your secrets.
 
-# Usage
+## Usage
 
 ```ruby
 rails server
 ```
 
-# Test
+## Test
 
 ```
 rspec
 ```
 
-# Authors
+## Authors
 
 - [Michael Andorfer](mailto:mandorfer.mmt-b2014@fh-salzburg.ac.at)
 - [Bernhard Steger](mailto:bsteger.mmt-b2013@fh-salzburg.ac.at)
 
-# License
+## License
 
-[The MIT License](https://opensource.org/licenses/MIT)
+[GNU General Public License, version 3 (GPL-3.0)](https://opensource.org/licenses/GPL-3.0)
